@@ -1,0 +1,56 @@
+=== Dung lai CSDL va du lieu luong demo
+Da chot cong 01/2026: 0 loi
+Da chot cong 02/2026: 0 loi
+Da chot cong 03/2026: 0 loi
+Da tinh ky 01/2026 va khoa
+Da tinh ky 02/2026 va khoa
+Da tinh ky 03/2026 (tam tinh)
+=== TC-47: nhan su tai ngay, hop dong sap het han; QR-05
+--- tests/rep/tc47_setup_owner.sql  (user owner)
+Da tao hop dong da huy TC47-HUY (NV010, het han 25/11/2026)
+--- tests/rep/tc47_hr01.sql  (user U_HR01)
+PASS  TC-47 NV023 tai 15/01: KINH_DOANH; tai 15/02: KY_THUAT (dung lich su,
+PASS  TC-47 Tai 15/01/2026: tong theo phong 50 = chi tiet 50 = nguoi dang lam 50
+PASS  TC-47 Hop dong het han trong 30 ngay tu 15/11/2026: NV009,NV022
+PASS  TC-47 Hop dong da huy TC47-HUY (het han 25/11) bi loai
+PASS  TC-47 Hop dong khong thoi han khong co trong VW-06: 0
+PASS  QR-05 chuan bi: HR them NV051 vao lam 02/11/2026 (chua co tai khoan)
+--- tests/rep/tc47_admin.sql  (user U_ADMIN)
+PASS  QR-05 Nguoi dang lam chua co tai khoan: NV051
+PASS  VW-13 Danh ba Admin khong co cot dinh danh, MST, ngay sinh, dia chi: 0
+PASS  TC-08 Admin van khong doc duoc VW-01 (-942)
+=== TC-48: cong/phep/OT co don tu choi va da rut (truong phong)
+--- tests/rep/tc48_tp_kt.sql  (user U_TP_KT)
+PASS  TC-48 VW-03: dong ngoai phong Ky thuat = 0
+PASS  TC-48 VW-14: dong ngoai phong Ky thuat = 0
+PASS  TC-48 Khong thay don nghi cua NV_C (phong Kinh doanh): 0
+PASS  TC-48 Doi chieu duoc: 2 buoi don tu choi, 2 buoi don da rut
+PASS  TC-48 QR-11 khong cong buoi cua don tu choi / da rut: 0
+PASS  TC-48 QR-11 tong buoi nghi da duyet phong Ky thuat quy 1: 7
+PASS  TC-48 VW-03 ngay nghi cua NV039 (02) va NV040 (03): 0
+=== TC-49: dieu chuyen roi xem quy luong ky cu
+QUY KINH_DOANH 01/2026 = 232348069 | 14 phieu
+PASS  TC-49 NV023: phieu 01 thuoc KINH_DOANH, phieu 02 thuoc KY_THUAT (1)
+NV024 phong hien tai (VW-01) = KINH_DOANH
+PASS  TC-49 NV024 tren phieu 01/2026 van thuoc KINH_DOANH
+--- tests/rep/tc49_hr01.sql  (user U_HR01)
+PASS  TC-49 U_HR01 dieu chuyen NV024 sang KE_TOAN tu 01/11/2026
+QUY KINH_DOANH 01/2026 = 232348069 | 14 phieu
+PASS  TC-49 NV023: phieu 01 thuoc KINH_DOANH, phieu 02 thuoc KY_THUAT (1)
+NV024 phong hien tai (VW-01) = KE_TOAN
+PASS  TC-49 NV024 tren phieu 01/2026 van thuoc KINH_DOANH
+PASS  TC-49 Quy luong KINH_DOANH ky 01 khong doi sau dieu chuyen (QUY KINH_DOANH 01/2026 = 232348069 | 14 phieu)
+=== TC-50: so sanh voi ky truoc co quy bang 0
+--- tests/rep/tc50_pay01.sql  (user U_PAY01)
+PASS  TC-50 01/2026: quy truoc = 0, ty le = NULL (khong loi chia 0)
+PASS  TC-50 02/2026: ty le so voi 01 = -.77%
+=== TC-51: xuat CSV bang truong phong va Payroll
+PASS  TC-51 TP_KT xuat nhan su phong: 18 dong, dong ngoai phong Ky thuat: 0
+PASS  TC-51 File cua TP khong co cot mat khau/dinh danh/MST: "MA_NHAN_VIEN","HO_TEN","MA_PHONG_BAN","TEN_PHONG_BAN","MA_CHUC_VU","TEN_CHUC_VU...
+PASS  TC-51 TP xuat bang luong (VW-04) bi chan: ORA-00942
+PASS  TC-51 File luong chi con ban nen exports/tc51_luong.zip (khong de lai CSV tran)
+PASS  TC-51 Giai nen bang mat khau sai bi tu choi (AES-256)
+PASS  TC-51 Giai nen bang mat khau trong .env: 50 phieu, khong co cot hash mat khau
+PASS  TC-51 Ky 01/2026 da khoa: moi dong ghi CHINH THUC
+=== Tra CSDL ve du lieu mau
+Da dung lai CSDL

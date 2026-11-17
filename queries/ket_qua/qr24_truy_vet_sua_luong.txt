@@ -1,0 +1,15 @@
+-- qr24_truy_vet_sua_luong   (user U_PAY01, chay luc 15/11/2026 23:05)
+THOI_DIEM           TEN_DANG_N DOI_TUONG          KHOA_B THAO_T TRUONG             TRUOC          SAU
+------------------- ---------- ------------------ ------ ------ ------------------ -------------- --------------
+15/11/2026 16:04:55 nv005      KY_LUONG           1      UPDATE TRANG_THAI         MO             CHOT_CONG
+15/11/2026 16:04:55 nv005      KY_LUONG           2      UPDATE TRANG_THAI         MO             CHOT_CONG
+15/11/2026 16:04:55 nv005      KY_LUONG           3      UPDATE TRANG_THAI         MO             CHOT_CONG
+15/11/2026 16:04:56 nv012      KY_LUONG           1      UPDATE PHIEN_BAN_DAU_VAO  0              1
+15/11/2026 16:04:56 nv012      PHAT_SINH_LUONG    4      INSERT SO_TIEN                           12000000
+15/11/2026 16:04:56 nv012      PHAT_SINH_LUONG    4      INSERT TRANG_THAI_DUYET                  DA_DUYET
+15/11/2026 16:04:56 nv012      KY_LUONG           1      UPDATE TRANG_THAI         CHOT_CONG      DA_TINH
+15/11/2026 16:04:56 nv012      KY_LUONG           1      UPDATE TRANG_THAI         DA_TINH        DA_KHOA
+15/11/2026 16:04:56 nv012      KY_LUONG           2      UPDATE TRANG_THAI         CHOT_CONG      DA_TINH
+15/11/2026 16:04:56 nv012      KY_LUONG           2      UPDATE TRANG_THAI         DA_TINH        DA_KHOA
+15/11/2026 16:04:56 nv012      KY_LUONG           3      UPDATE TRANG_THAI         CHOT_CONG      DA_TINH
+11 rows selected.

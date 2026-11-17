@@ -1,0 +1,78 @@
+### 1/5 Dung lai CSDL demo
+    (9 s)
+### 2/5 OWNER: sinh du lieu 3 nam
+--- seed/perf/01_nen.sql  (user owner)
+    (1 s)
+--- seed/perf/02_nhan_vien.sql  (user owner)
+    (2 s)
+--- seed/perf/03_cong_nghi_ot.sql  (user owner)
+    (16 s)
+--- seed/perf/04_quyet_dinh_phat_sinh.sql  (user owner)
+    (3 s)
+### 3/5 U_HR01: chot cong 36 ky
+--- scripts/perf/01_chot_cong_hr01.sql  (user U_HR01)
+Da chot cong den 09/2023 (.01 s ky cuoi)
+Da chot cong den 03/2024 (.01 s ky cuoi)
+Da chot cong den 09/2024 (.01 s ky cuoi)
+Da chot cong den 03/2025 (.02 s ky cuoi)
+Da chot cong den 09/2025 (.01 s ky cuoi)
+Da chot cong den 03/2026 (.03 s ky cuoi)
+    (2 s)
+### 4/5 U_PAY01: tinh va khoa 36 ky
+    (24 s)
+    36 ky, trung binh 0.62 s/ky, cham nhat 2023-04 (201 phieu) 0.92 s
+### 5/5 OWNER: thong ke va so dong
+--- seed/perf/05_dem.sql  (user owner)
+DEM   NHAN_VIEN 		     320   (muc 5.6: 240)
+DEM   TAI_KHOAN 		     321   (muc 5.6: 245)
+DEM   QUA_TRINH_CONG_TAC	     344   (muc 5.6: 360)
+DEM   HOP_DONG			     392   (muc 5.6: 420)
+DEM   MUC_LUONG_HOP_DONG	   1,052   (muc 5.6: 700)
+DEM   NGUOI_PHU_THUOC		     150   (muc 5.6: 180)
+DEM   LICH_LAM_VIEC		   1,371   (muc 5.6: 1,096)
+DEM   CHAM_CONG 		 191,685   (muc 5.6: 156,000)
+DEM   DANG_KY_TANG_CA		   6,378   (muc 5.6: 7,200)
+DEM   DON_NGHI_PHEP		   4,735   (muc 5.6: 4,800)
+DEM   CHI_TIET_NGHI_PHEP	  11,721   (muc 5.6: 14,400)
+DEM   LICH_SU_DUYET_NGHI	   9,469   (muc 5.6: 9,600)
+DEM   KY_LUONG			      36   (muc 5.6: 36)
+DEM   PHIEU_LUONG		   9,243   (muc 5.6: 7,200)
+DEM   CHI_TIET_PHIEU_LUONG	  95,683   (muc 5.6: 108,000)
+DEM   PHAT_SINH_LUONG		   3,065   (muc 5.6: 3,600)
+DEM   KHOAN_LUONG_NHAN_VIEN	     546   (muc 5.6: 800)
+DEM   KHEN_THUONG		     324   (muc 5.6: 360)
+DEM   KY_LUAT			      59   (muc 5.6: 60)
+DEM   NHAT_KY_HE_THONG		  15,953   (muc 5.6: 450,000)
+    (7 s)
+=== Cau hinh may
+Ngay do: 16/11/2026 16:59
+May chu: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 8 CPU logic, RAM 15.8 GB, o dia SSD (PNY CS1031 500GB SSD)
+He dieu hanh: Microsoft Windows 11 Home Single Language
+Docker 29.9.2 (WSL2): 8 CPU, RAM 8241414144 byte cap cho container
+Oracle: Version 23.26.3.0.0
+=== TC-54 truoc/sau index
+So index dua ve INVISIBLE khi do TRUOC: 19
+=== TC-54 / NFR-06: 10 phien dong thoi
+10 phien xong sau 4 s
+=== Tong hop
+TC-54 - Ngay do: 16/11/2026 16:59
+
+NFR-08 Tinh ky (sp_tinh_luong_ky, 36 ky, U_PAY01):
+  36 ky, trung binh 0.62 s/ky; ky lau nhat 2023-04: 201 phieu, 0.92 s (muc nghiem thu: ghi thoi gian; muc tieu <= 30 s)
+
+NFR-07 / plan: 30 lan moi truy van, 1 phien (ms; gets = logical reads/lan)
+  QR    | TRUOC p50 / p95 / max    | SAU p50 / p95 / max      | gets truoc>sau   | dong/lan
+  QR08  |  1151.4 /  1918.7 /  1927.5 |    20.9 /    29.1 /    75.4 |  237693 > 3765   | 100
+  QR17  |     5.7 /     8.6 /    28.2 |     0.2 /     0.4 /    16.6 |     718 > 29     | 10
+  QR18  |     0.7 /     1.2 /    12.7 |     0.4 /     0.6 /     6.4 |     100 > 19     | 6
+  QR21  |     2.0 /     2.7 /     8.3 |     2.0 /     3.3 /     7.9 |      98 > 98     | 12
+  QR08 voi VW-03 ban dau: TRUOC p50 683.6 / p95 877.8 ms, 125921 gets; SAU p50 349.6 / p95 472.2 ms, 18867 gets
+
+NFR-06: 10 phien U_PAY01 dong thoi, moi phien 20 lan QR-17 + 20 lan QR-08 (ms)
+  QR17: 200 mau, p50 0.3, p95 16.5, max 349.3 (muc tieu p95 <= 2000)
+  QR08: 200 mau, p50 42.2, p95 452.4, max 645.7 (muc tieu p95 <= 2000)
+=== Danh gia TC-54
+PASS  TC-54 NFR-08 Tinh du 36 ky, ky lau nhat 0.924 s (<= 30 s)
+PASS  TC-54 Execution plan truoc/sau index cua QR-08, QR-17, QR-18, QR-21 (8/8 plan)
+PASS  TC-54 NFR-07 p95 QR-18/QR-21 sau index 3.3 ms (<= 5000 ms)
+PASS  TC-54 NFR-06 p95 tra cuu voi 10 phien dong thoi 353.8 ms tren 400 mau (<= 2000 ms)

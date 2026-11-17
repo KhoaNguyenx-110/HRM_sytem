@@ -1,0 +1,16 @@
+-- qr11_nghi_theo_loai   (user U_HR01, chay luc 15/11/2026 23:05)
+MA_PHONG_BAN MA_NHAN_VIEN HO_TEN                   TEN_LOAI_NGHI               SO_BUOI    SO_NGAY     SO_GIO TU_NGAY    DEN_NGAY
+------------ ------------ ------------------------ ------------------------ ---------- ---------- ---------- ---------- ----------
+KINH_DOANH   NV019        Ngô Thu Vy               Nghỉ phép năm                     2          1          8 27/03/2026 27/03/2026
+KINH_DOANH   NV_C         Huỳnh Văn Hùng           Nghỉ phép năm                     1         ,5          4 05/02/2026 05/02/2026
+KY_THUAT     NV037        Hoàng Thị Nam            Nghỉ ốm                           2          1          8 22/01/2026 22/01/2026
+KY_THUAT     NV038        Đỗ Quốc Tuấn             Nghỉ không lương                  1         ,5          4 20/03/2026 20/03/2026
+KY_THUAT     NV_B         Huỳnh Ngọc Thảo          Nghỉ phép năm                     4          2         16 09/03/2026 10/03/2026
+NHAN_SU      NV005        Huỳnh Ngọc Thảo          Nghỉ phép năm                     2          1          8 27/01/2026 27/01/2026
+6 rows selected.
+TRANG_THAI    SO_BUOI
+---------- ----------
+DA_DUYET           12
+DA_RUT              2
+TU_CHOI             2
+3 rows selected.

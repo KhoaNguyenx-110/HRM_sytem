@@ -1,0 +1,9 @@
+-- qr20_top_ot   (user U_PAY01, chay luc 15/11/2026 23:05)
+      HANG MA_NHAN_VIEN HO_TEN                   MA_PHONG_BAN     GIO_OT
+---------- ------------ ------------------------ ------------ ----------
+         1 NV037        Hoàng Thị Nam            KY_THUAT              4
+         1 NV038        Đỗ Quốc Tuấn             KY_THUAT              4
+         1 NV_A         Ngô Minh Linh            KY_THUAT              4
+         2 NV033        Phan Hải Dũng            KY_THUAT              3
+         2 NV_B         Huỳnh Ngọc Thảo          KY_THUAT              3
+5 rows selected.

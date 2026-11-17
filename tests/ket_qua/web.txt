@@ -1,0 +1,56 @@
+=== Dung lai CSDL demo + mat khau web
+Da dat mat khau web cho 51 tai khoan demo
+--- TC-56 (user HRM_APP)
+PASS  TC-56 Chua co danh tinh: tong so dong cua 14 view = 0
+PASS  TC-56 Chua co danh tinh: doc danh muc bi tu choi (-20003)
+PASS  TC-56 HRM_APP khong doc duoc bang goc (-942)
+PASS  TC-56 HRM_APP khong ghi duoc qua view (-41900)
+PASS  TC-56 NV_A: VW-01 1 dong, 0 dong cua nguoi khac
+PASS  TC-56 NV_A: 0 dong o VW-04, 09, 13, 08, 06, 07, 10 (thay 0)
+PASS  TC-56 NV_A: VW-12 khong co dong cua nguoi khac (0)
+PASS  TC-56 NV_A: doc duoc danh muc phong ban (5 dong)
+PASS  TC-56 NV_A: doc danh muc VAI_TRO bi tu choi (-20009)
+PASS  TC-56 NV_A: doc KY_LUONG bi tu choi (-20009)
+PASS  TC-56 Admin: VW-09 co 51 tai khoan
+PASS  TC-56 Admin: VW-13 co 50 dong
+PASS  TC-56 Admin: khong thay ho so, bang luong (TC-08) (0)
+PASS  TC-56 Admin: doc danh muc VAI_TRO (5 dong)
+PASS  TC-56 Admin: doc PHONG_BAN bi tu choi theo ma tran 8.2 (-20009)
+PASS  TC-56 Sau xoa_phien: tong so dong cua 14 view = 0
+PASS  TC-56 lay_thong_tin_xac_thuc tra trang thai KHOA cho nv_khoa
+PASS  TC-56 Tai khoan KHOA khong nhan duoc danh tinh (-20001)
+PASS  TC-56 Sau lan gan that bai: 14 view van 0 dong
+PASS  TC-56 Ten dang nhap khong ton tai: id, hash, trang thai deu NULL
+--- TC-57, TC-58 API (pytest)
+PASS  TC-58 tests/test_nghiep_vu.py::test_1_danh_muc_theo_vai_tro
+PASS  TC-58 tests/test_nghiep_vu.py::test_2_luong_thang_1_den_phieu_nhan_vien
+PASS  TC-58 tests/test_nghiep_vu.py::test_3_nghi_phep_ot_duyet
+PASS  TC-58 tests/test_nghiep_vu.py::test_4_nhan_su
+PASS  TC-58 tests/test_nghiep_vu.py::test_5_quan_tri
+PASS  TC-57 tests/test_pool.py::test_pool_mot_ket_noi
+PASS  TC-57 tests/test_pool.py::test_xen_ke_nguoi_dung_tren_cung_mot_phien
+PASS  TC-57 tests/test_pool.py::test_request_loi_giua_chung_van_xoa_danh_tinh
+PASS  TC-57 tests/test_pool.py::test_tai_khoan_khoa_khong_de_lai_danh_tinh
+PASS  TC-57 tests/test_xac_thuc.py::test_chua_dang_nhap_bi_tu_choi
+PASS  TC-57 tests/test_xac_thuc.py::test_sai_mat_khau_va_ten_khong_ton_tai_cung_mot_cau
+PASS  TC-57 tests/test_xac_thuc.py::test_nhan_vien_danh_tinh_do_csdl_nap
+PASS  TC-57 tests/test_xac_thuc.py::test_cookie_httponly_samesite
+PASS  TC-57 tests/test_xac_thuc.py::test_nhieu_vai_tro_va_admin_khong_co_ho_so
+PASS  TC-57 tests/test_xac_thuc.py::test_tai_khoan_khoa_khong_dang_nhap_duoc
+PASS  TC-57 tests/test_xac_thuc.py::test_token_gia_mao_bi_tu_choi
+PASS  TC-57 tests/test_xac_thuc.py::test_nam_lan_sai_lien_tiep_thi_khoa
+PASS  TC-57 tests/test_xac_thuc.py::test_khoa_giua_phien_co_hieu_luc_ngay
+PASS  TC-57 tests/test_xac_thuc.py::test_doi_mat_khau
+      19 passed, 1 warning in 12.40s
+--- TC-59 giao dien (Edge + Playwright)
+Da dat mat khau web cho 51 tai khoan demo
+PASS  TC-59 tests/test_giao_dien.py::test_1_dang_nhap_sai_roi_dung
+PASS  TC-59 tests/test_giao_dien.py::test_2_menu_theo_vai_tro
+PASS  TC-59 tests/test_giao_dien.py::test_3_an_menu_khong_phai_la_bao_mat
+PASS  TC-59 tests/test_giao_dien.py::test_4_luong_thang_1_qua_giao_dien
+PASS  TC-59 tests/test_giao_dien.py::test_5_dang_ky_nghi_va_truong_phong_duyet
+PASS  TC-59 tests/test_giao_dien.py::test_6_admin_khoa_va_mo_tai_khoan
+PASS  TC-59 tests/test_giao_dien.py::test_7_man_hinh_dien_thoai
+      7 passed, 1 warning in 31.01s
+=== Tra CSDL ve du lieu mau
+Da dung lai CSDL

@@ -1,0 +1,7 @@
+-- qr12_ot_theo_loai_ngay   (user U_PAY01, chay luc 15/11/2026 23:05)
+LOAI_NGAY           BGD    NHAN_SU    KE_TOAN KINH_DOANH   KY_THUAT
+------------ ---------- ---------- ---------- ---------- ----------
+NGAY_THUONG           0          0          0        4,5         10
+NGHI_TUAN             0          0          0          0          4
+LE                    0          0          0          0          4
+3 rows selected.

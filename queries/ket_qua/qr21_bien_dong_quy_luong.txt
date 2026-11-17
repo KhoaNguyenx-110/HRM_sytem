@@ -1,0 +1,9 @@
+-- qr21_bien_dong_quy_luong   (user U_PAY01, chay luc 15/11/2026 23:05)
+KY                 GROSS      GROSS_TRUOC       CHENH_LECH TY_LE_PCT TINH_TRANG
+------- ---------------- ---------------- ---------------- --------- ------------
+11/2025                0                                             KHONG CO KY
+12/2025                0                0                0           KHONG CO KY
+01/2026      932.295.344                0      932.295.344           CHINH THUC
+02/2026      925.085.155      932.295.344       -7.210.189     -0,77 CHINH THUC
+03/2026      920.894.859      925.085.155       -4.190.296     -0,45 TAM TINH
+5 rows selected.

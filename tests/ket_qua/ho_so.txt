@@ -1,0 +1,72 @@
+--- tests/hr/tc03_08_admin.sql  (user U_ADMIN)
+PASS  TC-03 Ten trung khac hoa/thuong bi tu choi (-20010)
+PASS  TC-03 Tai khoan thu hai cho NV_C bi tu choi (-20011)
+PASS  NFR-04 Tao tai khoan voi mat khau ro bi tu choi (-20006)
+PASS  TC-04 Gan vai tro trung bi tu choi (-20012)
+PASS  Tach nhiem vu: Admin tu cap PAYROLL bi tu choi (-20014)
+PASS  TC-08 Admin doc ho so nhan vien bi tu choi (-942)
+PASS  TC-08 Admin goi duyet quyet dinh bi tu choi (-6550)
+PASS  VW-09 Admin thay 51 tai khoan (51)
+PASS  VW-09 Khong co cot mat khau
+PASS  TC-04 Thu hoi HR cua nv006 va COMMIT
+--- tests/hr/tc04b_hr02_mat_quyen.sql  (user U_HR02)
+PASS  TC-04 Phien moi cua U_HR02 khong con HR (,EMPLOYEE,)
+PASS  TC-04 Goi nghiep vu HR sau khi bi thu hoi bi tu choi (-20009)
+--- tests/hr/tc04c_admin_khoi_phuc.sql  (user U_ADMIN)
+PASS  TC-04 Audit thu hoi vai tro (DELETE, nguoi = admin)
+PASS  TC-04 Audit cap lai vai tro (INSERT, nguoi = admin)
+--- tests/hr/tc09_17_hr01.sql  (user U_HR01)
+PASS  TC-09 Them phong trung ma bi tu choi (-20101)
+PASS  TC-09 Them chuc vu trung ma bi tu choi (-20102)
+PASS  FR-ORG-02 Chuc vu ten rong bi tu choi (-20901)
+PASS  TC-09 Doi ten phong: phan cong van tro dung phong (19 nguoi)
+PASS  TC-10 Chi dinh nguoi khac phong bi tu choi (-20103)
+PASS  TC-10 Chi dinh truong phong thu hai bi tu choi (-20104)
+PASS  TC-10 FN-07 tra dung truong phong Ky thuat tai 01/03/2026
+PASS  TC-11 Ngung phong con phan cong bi tu choi (-20105)
+PASS  TC-11 Ngung phong khong con phan cong
+PASS  TC-11/TC-16 Dieu chuyen vao phong da ngung bi tu choi (-20106)
+PASS  TC-16 Loi buoc moi: NV_C giu phan cong cu (KINH_DOANH)
+PASS  TC-12 Ma nhan vien trung bi tu choi (-20201)
+PASS  TC-12 Loi phan cong bi tu choi (-20104)
+PASS  TC-12 Khong con ho so do dang (50 -> 50)
+PASS  TC-12 Them ho so hop le kem phan cong (TX-01)
+PASS  TC-13/TC-52 Audit ghi nguoi sua, email truoc va sau
+PASS  TC-14 Hop dong chong hieu luc bi tu choi (-20205)
+PASS  TC-14 Ngay ket thuc truoc bat dau bi tu choi (-20206)
+PASS  TC-14 Muc luong tu ngay 15 bi tu choi (-20207)
+PASS  TC-14/TC-52 Tang luong tu ngay 1 thanh cong, co audit (2 dong)
+PASS  TC-15 Cung dinh danh trung khoang bi tu choi (-20210)
+PASS  TC-15 Khoang ngay sai bi tu choi (-20209)
+PASS  TC-15 HR tu xac minh cua minh bi tu choi (-20222)
+PASS  TC-15 Dang ky va xac minh hop le
+PASS  TC-16 Truong phong Kinh doanh bi chuyen: phong cu trong truong phong tu
+PASS  TC-16 Truoc ngay hieu luc van la truong phong
+PASS  FR-EMP-05 Dieu chuyen khong tu ngay 1 bi tu choi (-20219)
+PASS  TC-17 Nghi viec khi con cong sau ngay nghi bi tu choi (-20208)
+PASS  TC-17 Ghi nghi viec: trang thai DA_NGHI, lich su con
+PASS  TC-44 So quyet dinh trung bi tu choi (-20601)
+PASS  TC-44 Thuong bang 0 bi tu choi (-20602)
+PASS  TC-44 HR duyet quyet dinh minh tao bi tu choi (-20604)
+PASS  TC-46 Ghi ky luat thanh cong (khong co duong ghi sang PHAT_SINH_LUONG,
+(da ROLLBACK moi thay doi thu)
+--- tests/hr/tc44_hr02.sql  (user U_HR02)
+PASS  TC-44 HR khac nguoi tao duyet quyet dinh
+PASS  RWD-02 Duyet lai quyet dinh da duyet bi tu choi (-20603)
+PASS  TC-44 HR02 tu duyet quyet dinh minh tao bi tu choi (-20604)
+--- tests/hr/tc18_pham_vi.sql  (user U_NV_A)
+PASS  [U_NV_A] TC-18 Nhan vien chi thay chinh minh (1 dong)
+PASS  [U_NV_A] TC-18 Dong do la NV_A, dinh danh khong bi che
+--- tests/hr/tc18_pham_vi.sql  (user U_TP_KT)
+PASS  [U_TP_KT] TC-18 Truong phong thay 19 nguoi, khong ai phong khac
+PASS  [U_TP_KT] TC-18 Dinh danh nguoi khac chi hien 4 so cuoi
+PASS  [U_TP_KT] TC-18 Ma so thue nguoi khac bi an
+PASS  [U_TP_KT] VW-07 Nhan su phong minh (18 nguoi)
+--- tests/hr/tc18_pham_vi.sql  (user U_TP_KD)
+PASS  [U_TP_KD] TC-18 Truong phong thay 13 nguoi, khong ai phong khac
+PASS  [U_TP_KD] TC-18 Dinh danh nguoi khac chi hien 4 so cuoi
+PASS  [U_TP_KD] TC-18 Ma so thue nguoi khac bi an
+PASS  [U_TP_KD] VW-07 Nhan su phong minh (13 nguoi)
+--- tests/hr/tc18_pham_vi.sql  (user U_HR01)
+PASS  [U_HR01] TC-18 HR thay du 50 ho so (50)
+PASS  [U_HR01] TC-18 HR thay dinh danh day du

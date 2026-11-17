@@ -1,0 +1,20 @@
+-- qr17_phieu_luong_chi_tiet   (user U_PAY01, chay luc 15/11/2026 23:05)
+MA_NHAN_VIEN HO_TEN                   TEN_PHONG_BAN      TEN_CHUC_VU      TINH_TRANG  GROSS        BH_NLD       TNTT         THUE         NET
+------------ ------------------------ ------------------ ---------------- ----------- ------------ ------------ ------------ ------------ ------------
+NV_A         Ngô Minh Linh            Phòng Kỹ thuật     Chuyên viên      CHINH THUC  39.300.000   2.772.000    13.928.000   892.800      35.635.200
+1 row selected.
+MA_KHOAN        TEN_KHOAN                    NHOM_KHOAN_AP_D SO_LUONG           DON_GIA  HE_SO   THANH_TIEN PHAN_CHIU_THUE
+--------------- ---------------------------- --------------- -------- ----------------- ------ ------------ --------------
+LUONG_CONG      Lương theo công              THU_NHAP          176,00      150.000,0000  1,000   26.400.000     26.400.000
+OT              Tiền làm thêm giờ            THU_NHAP            4,00      150.000,0000  1,500      900.000              0
+THUONG          Thưởng                       THU_NHAP            1,00   12.000.000,0000  1,000   12.000.000     12.000.000
+BHTN_NLD        BHTN người lao động          BAO_HIEM_NLD        1,00   26.400.000,0000  0,010      264.000              0
+BHXH_NLD        BHXH người lao động          BAO_HIEM_NLD        1,00   26.400.000,0000  0,080    2.112.000              0
+BHYT_NLD        BHYT người lao động          BAO_HIEM_NLD        1,00   26.400.000,0000  0,015      396.000              0
+THUE_TNCN       Thuế thu nhập cá nhân        THUE_TNCN           1,00      892.800,0000  1,000      892.800              0
+BHTN_NSDLD      BHTN doanh nghiệp đóng       BAO_HIEM_NSDLD      1,00   26.400.000,0000  0,010      264.000              0
+BHTNLD_NSDLD    Bảo hiểm TNLĐ-BNN doanh nghi BAO_HIEM_NSDLD      1,00   26.400.000,0000  0,005      132.000              0
+                ệp đóng
+BHXH_NSDLD      BHXH doanh nghiệp đóng       BAO_HIEM_NSDLD      1,00   26.400.000,0000  0,170    4.488.000              0
+BHYT_NSDLD      BHYT doanh nghiệp đóng       BAO_HIEM_NSDLD      1,00   26.400.000,0000  0,030      792.000              0
+11 rows selected.

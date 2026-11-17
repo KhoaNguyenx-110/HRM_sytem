@@ -1,0 +1,14 @@
+-- qr03_tim_ho_so   (user U_TP_KT, chay luc 15/11/2026 23:04)
+MA_NHAN_VIEN HO_TEN                   SO_DINH_DANH   MA_SO_THUE     TEN_PHONG_BAN      TEN_CHUC_VU
+------------ ------------------------ -------------- -------------- ------------------ ----------------
+NV040        Bùi Văn Phúc             ********0040                  Phòng Kỹ thuật     Nhân viên
+NV041        Lê Thanh Bình            ********0041                  Phòng Kỹ thuật     Nhân viên
+NV042        Đặng Hoàng Khánh         ********0042                  Phòng Kỹ thuật     Chuyên viên
+NV043        Trần Hải Sơn             ********0043                  Phòng Kỹ thuật     Nhân viên
+NV044        Võ Minh Giang            ********0044                  Phòng Kỹ thuật     Nhân viên
+NV045        Nguyễn Ngọc Long         ********0045                  Phòng Kỹ thuật     Chuyên viên
+NV046        Vũ Đức Trang             ********0046                  Phòng Kỹ thuật     Nhân viên
+NV047        Dương Thị Hạnh           ********0047                  Phòng Kỹ thuật     Nhân viên
+NV048        Phan Quốc Nga            ********0048                  Phòng Kỹ thuật     Chuyên viên
+NV049        Ngô Thu Vy               ********0049                  Phòng Kỹ thuật     Nhân viên
+10 rows selected.

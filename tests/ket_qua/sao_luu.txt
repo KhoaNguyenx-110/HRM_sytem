@@ -1,0 +1,31 @@
+=== TC-55 buoc 0: cau hinh
+PASS  TC-55 CSDL o che do ARCHIVELOG; archive_lag_target = 900 s
+PASS  TC-55 CONFIGURE CONTROLFILE AUTOBACKUP ON
+=== TC-55 buoc 1: level 0
+PASS  TC-55 Sao luu incremental level 0 xong sau 237 s
+=== TC-55: thay doi sau level 0
+Da COMMIT ky 04/2026 va phat sinh 10389
+=== TC-55 buoc 2: level 1
+PASS  TC-55 Sao luu incremental level 1 xong sau 12 s
+=== TC-55: thay doi sau level 1 (chi con trong redo)
+Da COMMIT sua email NV151 (sau level 1)
+Anh chup truoc su co: 32 bang, MOC1 phat sinh TC-55 sau level 0: 1
+=== TC-55 buoc 3: su co - xoa datafile USERS cua FREEPDB1
+PASS  TC-55 Mo FREEPDB1 sau khi mat file bi loi ORA-01157 (khong doc duoc datafile)
+=== TC-55 buoc 4: restore + recover
+PASS  TC-55 RESTORE + RECOVER datafile, mo lai PDB; thoi gian tu luc phat hien den khi mo: 41.4 s (RTO muc tieu <= 7200 s)
+PASS  TC-55 So dong 32 bang, so doi tuong, tong tien giong het truoc su co (diff rong)
+PASS  TC-55 Thay doi sau level 0 con (ap tu level 1)
+PASS  TC-55 Thay doi sau level 1 con (ap tu redo; RPO = 0 voi giao dich da commit)
+PASS  TC-55 0 doi tuong INVALID sau phuc hoi
+=== Data Pump: export schema HRM_OWNER
+PASS  TC-55 Export schema HRM_OWNER bang Data Pump (32 bang)
+=== Chep ban sao luu ra may chu (ngoai container CSDL)
+PASS  TC-55 Ban sao luu tai backup/: 2.7G
+TC-55 - 16/11/2026 17:07
+Level 0: 237 s; level 1: 12 s; phuc hoi (RTO do duoc): 41.4 s
+Dung luong ban sao luu RMAN: 2.6G
+INVALID 0
+TIEN net/gross 142564584968 / 158899531226
+MOC1 phat sinh TC-55 sau level 0: 1
+MOC2 email NV151 sua sau level 1: nv151.tc55@hrm.example.com

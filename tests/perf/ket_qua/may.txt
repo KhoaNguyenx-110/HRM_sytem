@@ -1,0 +1,5 @@
+Ngay do: 16/11/2026 16:59
+May chu: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 8 CPU logic, RAM 15.8 GB, o dia SSD (PNY CS1031 500GB SSD)
+He dieu hanh: Microsoft Windows 11 Home Single Language
+Docker 29.9.2 (WSL2): 8 CPU, RAM 8241414144 byte cap cho container
+Oracle: Version 23.26.3.0.0

@@ -1,0 +1,18 @@
+-- qr07_nguoi_phu_thuoc   (user U_HR01, chay luc 15/11/2026 23:05)
+MA_NHAN_VIEN HO_TEN                   NGUOI_PHU_THUOC          QUAN_HE    DINH_DANH      TU_NGAY    DEN_NGAY
+------------ ------------------------ ------------------------ ---------- -------------- ---------- ----------
+NV004        Ngô Minh Linh            Con của NV004            CON        ********0004   01/01/2022
+NV008        Đỗ Quốc Tuấn             Con của NV008            CON        ********0008   01/01/2022
+NV012        Đặng Hoàng Khánh         Con của NV012            CON        ********0012   01/01/2022
+NV012        Đặng Hoàng Khánh         Mẹ của NV012             CHA_ME     ********0012   01/01/2023
+NV016        Vũ Đức Trang             Con của NV016            CON        ********0016   01/01/2022
+NV024        Phạm Minh Tâm            Con của NV024            CON        ********0024   01/01/2022
+NV024        Phạm Minh Tâm            Mẹ của NV024             CHA_ME     ********0024   01/01/2023
+NV028        Trần Quốc Hiếu           Con của NV028            CON        ********0028   01/01/2022
+NV032        Dương Hoàng Quyên        Con của NV032            CON        ********0032   01/01/2022
+NV040        Bùi Văn Phúc             Con của NV040            CON        ********0040   01/01/2022
+NV044        Võ Minh Giang            Con của NV044            CON        ********0044   01/01/2022
+NV048        Phan Quốc Nga            Con của NV048            CON        ********0048   01/01/2022
+NV048        Phan Quốc Nga            Mẹ của NV048             CHA_ME     ********0048   01/01/2023
+NV_A         Ngô Minh Linh            Phạm Minh Khôi           CON        ********0034   01/01/2020
+14 rows selected.

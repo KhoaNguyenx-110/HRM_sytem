@@ -1,0 +1,2 @@
+-- qr05_chua_co_tai_khoan   (user U_ADMIN, chay luc 15/11/2026 23:05)
+no rows selected

@@ -1,0 +1,379 @@
+PLAN TRUOC QR08 | Plan hash value: 4069819967
+PLAN TRUOC QR08 |
+PLAN TRUOC QR08 | --------------------------------------------------------------------------------------------
+PLAN TRUOC QR08 | | Id	| Operation				| Name			| Rows	| Cost (%CPU)|
+PLAN TRUOC QR08 | --------------------------------------------------------------------------------------------
+PLAN TRUOC QR08 | |   0 | SELECT STATEMENT			|			|     1 |   367   (1)|
+PLAN TRUOC QR08 | |   1 |  SORT ORDER BY			|			|     1 |   367   (1)|
+PLAN TRUOC QR08 | |   2 |   MERGE JOIN OUTER			|			|     1 |   366   (1)|
+PLAN TRUOC QR08 | |   3 |    MERGE JOIN OUTER			|			|     1 |   335   (1)|
+PLAN TRUOC QR08 | |   4 |     MERGE JOIN OUTER			|			|     1 |   318   (1)|
+PLAN TRUOC QR08 | |*  5 |      FILTER				|			|	|	     |
+PLAN TRUOC QR08 | |   6 |	NESTED LOOPS OUTER		|			|     1 |    10   (0)|
+PLAN TRUOC QR08 | |*  7 |	 COUNT STOPKEY			|			|	|	     |
+PLAN TRUOC QR08 | |*  8 |	  TABLE ACCESS FULL		| QUA_TRINH_CONG_TAC	|     1 |     3   (0)|
+PLAN TRUOC QR08 | |*  9 |	 VIEW				|			|     1 |     9   (0)|
+PLAN TRUOC QR08 | |  10 |	  NESTED LOOPS			|			|     1 |     6   (0)|
+PLAN TRUOC QR08 | |* 11 |	   TABLE ACCESS BY INDEX ROWID	| KY_LUONG		|     1 |     1   (0)|
+PLAN TRUOC QR08 | |* 12 |	    INDEX UNIQUE SCAN		| UK_KY_LUONG_NAM_THANG |     1 |     0   (0)|
+PLAN TRUOC QR08 | |* 13 |	   TABLE ACCESS FULL		| NHAN_VIEN		|     1 |     5   (0)|
+PLAN TRUOC QR08 | |  14 |	 TABLE ACCESS BY INDEX ROWID	| PHONG_BAN		|     1 |     1   (0)|
+PLAN TRUOC QR08 | |* 15 |	  INDEX UNIQUE SCAN		| PK_PHONG_BAN		|     1 |     0   (0)|
+PLAN TRUOC QR08 | |  16 |      BUFFER SORT			|			|     1 |   317   (1)|
+PLAN TRUOC QR08 | |  17 |	VIEW				| VW_LAT_A9122F2C	|     1 |   308   (1)|
+PLAN TRUOC QR08 | |  18 |	 VIEW				| VW_LAT_E88661A9	|     1 |   308   (1)|
+PLAN TRUOC QR08 | |  19 |	  SORT AGGREGATE		|			|     1 |	     |
+PLAN TRUOC QR08 | |* 20 |	   TABLE ACCESS FULL		| CHAM_CONG		|     1 |   308   (1)|
+PLAN TRUOC QR08 | |  21 |     BUFFER SORT			|			|     1 |    27   (0)|
+PLAN TRUOC QR08 | |  22 |      VIEW				| VW_LAT_A9122F2C	|     1 |    17   (0)|
+PLAN TRUOC QR08 | |  23 |	VIEW				| VW_LAT_ACD3FD94	|     1 |    17   (0)|
+PLAN TRUOC QR08 | |  24 |	 SORT AGGREGATE 		|			|     1 |	     |
+PLAN TRUOC QR08 | |  25 |	  NESTED LOOPS			|			|     1 |    17   (0)|
+PLAN TRUOC QR08 | |  26 |	   NESTED LOOPS 		|			|     1 |    17   (0)|
+PLAN TRUOC QR08 | |  27 |	    NESTED LOOPS		|			|     1 |    16   (0)|
+PLAN TRUOC QR08 | |* 28 |	     TABLE ACCESS FULL		| CHI_TIET_NGHI_PHEP	|     1 |    15   (0)|
+PLAN TRUOC QR08 | |* 29 |	     TABLE ACCESS BY INDEX ROWID| DON_NGHI_PHEP 	|     1 |     1   (0)|
+PLAN TRUOC QR08 | |* 30 |	      INDEX UNIQUE SCAN 	| PK_DON_NGHI_PHEP	|     1 |     0   (0)|
+PLAN TRUOC QR08 | |* 31 |	    INDEX UNIQUE SCAN		| PK_LOAI_NGHI_PHEP	|     1 |     0   (0)|
+PLAN TRUOC QR08 | |  32 |	   TABLE ACCESS BY INDEX ROWID	| LOAI_NGHI_PHEP	|     1 |     1   (0)|
+PLAN TRUOC QR08 | |  33 |    BUFFER SORT			|			|     1 |   350   (1)|
+PLAN TRUOC QR08 | |  34 |     VIEW				| VW_LAT_A9122F2C	|     1 |    31   (0)|
+PLAN TRUOC QR08 | |  35 |      VIEW				| VW_LAT_3F835B8E	|     1 |    31   (0)|
+PLAN TRUOC QR08 | |  36 |	SORT AGGREGATE			|			|     1 |	     |
+PLAN TRUOC QR08 | |  37 |	 NESTED LOOPS			|			|     1 |    31   (0)|
+PLAN TRUOC QR08 | |  38 |	  NESTED LOOPS			|			|     1 |    31   (0)|
+PLAN TRUOC QR08 | |* 39 |	   TABLE ACCESS FULL		| DANG_KY_TANG_CA	|     1 |    30   (0)|
+PLAN TRUOC QR08 | |* 40 |	   INDEX UNIQUE SCAN		| PK_LICH_LAM_VIEC	|     1 |     0   (0)|
+PLAN TRUOC QR08 | |  41 |	  TABLE ACCESS BY INDEX ROWID	| LICH_LAM_VIEC 	|     1 |     1   (0)|
+PLAN TRUOC QR08 | --------------------------------------------------------------------------------------------
+PLAN TRUOC QR08 |
+PLAN TRUOC QR08 | Predicate Information (identified by operation id):
+PLAN TRUOC QR08 | ---------------------------------------------------
+PLAN TRUOC QR08 |
+PLAN TRUOC QR08 |    5 - filter(:P_PHONG IS NULL OR "B"."MA_PHONG_BAN"=:P_PHONG)
+PLAN TRUOC QR08 |    7 - filter(ROWNUM<=1)
+PLAN TRUOC QR08 |    8 - filter("Q"."NHAN_VIEN_ID"=:B1 AND "Q"."NGAY_BAT_DAU"<=LEAST(LAST_DAY(TO_DATE(
+PLAN TRUOC QR08 |		TO_CHAR(:B2)||'-'||TO_CHAR(:B3)||'-01','YYYY-MM-DD')),NVL(:B4,LAST_DAY(TO_DATE(TO_CH
+PLAN TRUOC QR08 |		AR(:B5)||'-'||TO_CHAR(:B6)||'-01','YYYY-MM-DD')))) AND
+PLAN TRUOC QR08 |		NVL("Q"."NGAY_KET_THUC",TO_DATE(' 9999-12-31 00:00:00', 'syyyy-mm-dd
+PLAN TRUOC QR08 |		hh24:mi:ss'))>=LEAST(LAST_DAY(TO_DATE(TO_CHAR(:B7)||'-'||TO_CHAR(:B8)||'-01','YYYY-M
+PLAN TRUOC QR08 |		M-DD')),NVL(:B9,LAST_DAY(TO_DATE(TO_CHAR(:B10)||'-'||TO_CHAR(:B11)||'-01','YYYY-MM-D
+PLAN TRUOC QR08 |		D')))))
+PLAN TRUOC QR08 |    9 - filter(TO_BOOLEAN("FN_CO_VAI_TRO"('HR'))=TRUE OR
+PLAN TRUOC QR08 |		TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE OR
+PLAN TRUOC QR08 |		"NK"."NHAN_VIEN_ID"="FN_NHAN_VIEN_HIEN_TAI"() OR
+PLAN TRUOC QR08 |		TO_BOOLEAN("FN_CO_VAI_TRO"('MANAGER'))=TRUE AND
+PLAN TRUOC QR08 |		"FN_TRUONG_PHONG_TAI_NGAY"("NK"."PHONG_BAN_ID",TRUNC(SYSDATE@!))="FN_NHAN_VIEN_HIEN_
+PLAN TRUOC QR08 |		TAI"())
+PLAN TRUOC QR08 |   11 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=1 AND
+PLAN TRUOC QR08 |		EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=12 AND EXTRACT(YEAR
+PLAN TRUOC QR08 |		FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2000 AND EXTRACT(YEAR FROM
+PLAN TRUOC QR08 |		INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=2100)
+PLAN TRUOC QR08 |   12 - access("K"."NAM"=TO_NUMBER(:P_NAM) AND "K"."THANG"=TO_NUMBER(:P_THANG))
+PLAN TRUOC QR08 |   13 - filter("N"."NGAY_VAO_LAM"<=LAST_DAY(TO_DATE(TO_CHAR("K"."NAM")||'-'||TO_CHAR(
+PLAN TRUOC QR08 |		"K"."THANG")||'-01','YYYY-MM-DD')) AND NVL("N"."NGAY_NGHI_VIEC",LAST_DAY(TO_DATE(TO_
+PLAN TRUOC QR08 |		CHAR("K"."NAM")||'-'||TO_CHAR("K"."THANG")||'-01','YYYY-MM-DD')))>=TO_DATE(TO_CHAR("
+PLAN TRUOC QR08 |		K"."NAM")||'-'||TO_CHAR("K"."THANG")||'-01','YYYY-MM-DD'))
+PLAN TRUOC QR08 |   15 - access("B"."PHONG_BAN_ID"(+)="NK"."PHONG_BAN_ID")
+PLAN TRUOC QR08 |   20 - filter("C"."NHAN_VIEN_ID"="NK"."NHAN_VIEN_ID" AND
+PLAN TRUOC QR08 |		"C"."NGAY">=INTERNAL_FUNCTION("NK"."TU") AND
+PLAN TRUOC QR08 |		"C"."NGAY"<=INTERNAL_FUNCTION("NK"."DEN"))
+PLAN TRUOC QR08 |   28 - filter("CT"."NHAN_VIEN_ID"="NK"."NHAN_VIEN_ID" AND
+PLAN TRUOC QR08 |		"CT"."NGAY">=INTERNAL_FUNCTION("NK"."TU") AND
+PLAN TRUOC QR08 |		"CT"."NGAY"<=INTERNAL_FUNCTION("NK"."DEN"))
+PLAN TRUOC QR08 |   29 - filter("D"."TRANG_THAI"='DA_DUYET')
+PLAN TRUOC QR08 |   30 - access("D"."DON_NGHI_ID"="CT"."DON_NGHI_ID")
+PLAN TRUOC QR08 |   31 - access("T"."LOAI_NGHI_ID"="D"."LOAI_NGHI_ID")
+PLAN TRUOC QR08 |   39 - filter("O"."NHAN_VIEN_ID"="NK"."NHAN_VIEN_ID" AND
+PLAN TRUOC QR08 |		"O"."TRANG_THAI"='DA_DUYET' AND "O"."NGAY">=INTERNAL_FUNCTION("NK"."TU") AND
+PLAN TRUOC QR08 |		"O"."NGAY"<=INTERNAL_FUNCTION("NK"."DEN"))
+PLAN TRUOC QR08 |   40 - access("L"."NGAY"="O"."NGAY")
+PLAN TRUOC QR17 | Plan hash value: 202380503
+PLAN TRUOC QR17 |
+PLAN TRUOC QR17 | ----------------------------------------------------------------------------------------
+PLAN TRUOC QR17 | | Id	| Operation			    | Name		    | Rows  | Cost (%CPU)|
+PLAN TRUOC QR17 | ----------------------------------------------------------------------------------------
+PLAN TRUOC QR17 | |   0 | SELECT STATEMENT		    |			    |	  1 |	201   (2)|
+PLAN TRUOC QR17 | |   1 |  SORT ORDER BY		    |			    |	  1 |	201   (2)|
+PLAN TRUOC QR17 | |   2 |   NESTED LOOPS		    |			    |	  1 |	200   (1)|
+PLAN TRUOC QR17 | |   3 |    NESTED LOOPS		    |			    |	  1 |	200   (1)|
+PLAN TRUOC QR17 | |*  4 |     HASH JOIN 		    |			    |	  1 |	199   (2)|
+PLAN TRUOC QR17 | |   5 |      NESTED LOOPS		    |			    |	  1 |	 27   (0)|
+PLAN TRUOC QR17 | |   6 |	NESTED LOOPS		    |			    |	  1 |	  2   (0)|
+PLAN TRUOC QR17 | |   7 |	 TABLE ACCESS BY INDEX ROWID| NHAN_VIEN 	    |	  1 |	  1   (0)|
+PLAN TRUOC QR17 | |*  8 |	  INDEX UNIQUE SCAN	    | UK_NHAN_VIEN_MA	    |	  1 |	  0   (0)|
+PLAN TRUOC QR17 | |*  9 |	 TABLE ACCESS BY INDEX ROWID| KY_LUONG		    |	  1 |	  1   (0)|
+PLAN TRUOC QR17 | |* 10 |	  INDEX UNIQUE SCAN	    | UK_KY_LUONG_NAM_THANG |	  1 |	  0   (0)|
+PLAN TRUOC QR17 | |* 11 |	TABLE ACCESS FULL	    | PHIEU_LUONG	    |	  1 |	 25   (0)|
+PLAN TRUOC QR17 | |* 12 |      TABLE ACCESS FULL	    | CHI_TIET_PHIEU_LUONG  | 95683 |	172   (2)|
+PLAN TRUOC QR17 | |* 13 |     INDEX UNIQUE SCAN 	    | PK_LOAI_KHOAN_LUONG   |	  1 |	  0   (0)|
+PLAN TRUOC QR17 | |  14 |    TABLE ACCESS BY INDEX ROWID    | LOAI_KHOAN_LUONG	    |	  1 |	  1   (0)|
+PLAN TRUOC QR17 | ----------------------------------------------------------------------------------------
+PLAN TRUOC QR17 |
+PLAN TRUOC QR17 | Predicate Information (identified by operation id):
+PLAN TRUOC QR17 | ---------------------------------------------------
+PLAN TRUOC QR17 |
+PLAN TRUOC QR17 |    4 - access("C"."PHIEU_LUONG_ID"="P"."PHIEU_LUONG_ID")
+PLAN TRUOC QR17 |    8 - access("N"."MA_NHAN_VIEN"=UPPER(:P_MA))
+PLAN TRUOC QR17 |    9 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=1
+PLAN TRUOC QR17 |		AND EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=12 AND
+PLAN TRUOC QR17 |		EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2000 AND
+PLAN TRUOC QR17 |		EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=2100)
+PLAN TRUOC QR17 |   10 - access("K"."NAM"=TO_NUMBER(:P_NAM) AND "K"."THANG"=TO_NUMBER(:P_THANG))
+PLAN TRUOC QR17 |   11 - filter("N"."NHAN_VIEN_ID"="P"."NHAN_VIEN_ID" AND
+PLAN TRUOC QR17 |		"K"."KY_LUONG_ID"="P"."KY_LUONG_ID" AND
+PLAN TRUOC QR17 |		(TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE OR
+PLAN TRUOC QR17 |		"P"."NHAN_VIEN_ID"="FN_NHAN_VIEN_HIEN_TAI"() AND "K"."TRANG_THAI"='DA_KHOA'))
+PLAN TRUOC QR17 |   12 - filter("THANH_TIEN">=0)
+PLAN TRUOC QR17 |   13 - access("L"."LOAI_KHOAN_ID"="C"."LOAI_KHOAN_ID")
+PLAN TRUOC QR18 | Plan hash value: 3038962591
+PLAN TRUOC QR18 |
+PLAN TRUOC QR18 | --------------------------------------------------------------------------------------
+PLAN TRUOC QR18 | | Id	| Operation			  | Name		  | Rows  | Cost (%CPU)|
+PLAN TRUOC QR18 | --------------------------------------------------------------------------------------
+PLAN TRUOC QR18 | |   0 | SELECT STATEMENT		  |			  |	5 |    30   (4)|
+PLAN TRUOC QR18 | |   1 |  HASH GROUP BY ROLLUP 	  |			  |	5 |    30   (4)|
+PLAN TRUOC QR18 | |*  2 |   FILTER			  |			  |	  |	       |
+PLAN TRUOC QR18 | |*  3 |    HASH JOIN			  |			  |   257 |    29   (0)|
+PLAN TRUOC QR18 | |   4 |     TABLE ACCESS FULL 	  | PHONG_BAN		  |	5 |	3   (0)|
+PLAN TRUOC QR18 | |   5 |     NESTED LOOPS		  |			  |   257 |    26   (0)|
+PLAN TRUOC QR18 | |*  6 |      TABLE ACCESS BY INDEX ROWID| KY_LUONG		  |	1 |	1   (0)|
+PLAN TRUOC QR18 | |*  7 |	INDEX UNIQUE SCAN	  | UK_KY_LUONG_NAM_THANG |	1 |	0   (0)|
+PLAN TRUOC QR18 | |*  8 |      TABLE ACCESS FULL	  | PHIEU_LUONG 	  |   257 |    25   (0)|
+PLAN TRUOC QR18 | --------------------------------------------------------------------------------------
+PLAN TRUOC QR18 |
+PLAN TRUOC QR18 | Predicate Information (identified by operation id):
+PLAN TRUOC QR18 | ---------------------------------------------------
+PLAN TRUOC QR18 |
+PLAN TRUOC QR18 |    2 - filter(TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE)
+PLAN TRUOC QR18 |    3 - access("PB"."PHONG_BAN_ID"="P"."PHONG_BAN_ID")
+PLAN TRUOC QR18 |    6 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=1
+PLAN TRUOC QR18 |		 AND EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=12 AND
+PLAN TRUOC QR18 |		EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2000 AND
+PLAN TRUOC QR18 |		EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=2100)
+PLAN TRUOC QR18 |    7 - access("K"."NAM"=TO_NUMBER(:P_NAM) AND "K"."THANG"=TO_NUMBER(:P_THANG))
+PLAN TRUOC QR18 |    8 - filter("K"."KY_LUONG_ID"="P"."KY_LUONG_ID")
+PLAN TRUOC QR21 | Plan hash value: 1541044005
+PLAN TRUOC QR21 |
+PLAN TRUOC QR21 | ----------------------------------------------------------------------------
+PLAN TRUOC QR21 | | Id	| Operation			  | Name	| Rows	| Cost (%CPU)|
+PLAN TRUOC QR21 | ----------------------------------------------------------------------------
+PLAN TRUOC QR21 | |   0 | SELECT STATEMENT		  |		|     1 |    32   (7)|
+PLAN TRUOC QR21 | |   1 |  WINDOW SORT			  |		|     1 |    32   (7)|
+PLAN TRUOC QR21 | |*  2 |   HASH JOIN OUTER		  |		|     1 |    31   (4)|
+PLAN TRUOC QR21 | |   3 |    VIEW			  |		|     1 |     2   (0)|
+PLAN TRUOC QR21 | |*  4 |     CONNECT BY WITHOUT FILTERING|		|	|	     |
+PLAN TRUOC QR21 | |   5 |      FAST DUAL		  |		|     1 |     2   (0)|
+PLAN TRUOC QR21 | |   6 |    VIEW			  |		|    36 |    29   (4)|
+PLAN TRUOC QR21 | |   7 |     HASH GROUP BY		  |		|    36 |    29   (4)|
+PLAN TRUOC QR21 | |*  8 |      FILTER			  |		|	|	     |
+PLAN TRUOC QR21 | |*  9 |	HASH JOIN		  |		|  9243 |    28   (0)|
+PLAN TRUOC QR21 | |* 10 |	 TABLE ACCESS FULL	  | KY_LUONG	|    36 |     3   (0)|
+PLAN TRUOC QR21 | |  11 |	 TABLE ACCESS FULL	  | PHIEU_LUONG |  9243 |    25   (0)|
+PLAN TRUOC QR21 | ----------------------------------------------------------------------------
+PLAN TRUOC QR21 |
+PLAN TRUOC QR21 | Predicate Information (identified by operation id):
+PLAN TRUOC QR21 | ---------------------------------------------------
+PLAN TRUOC QR21 |
+PLAN TRUOC QR21 |    2 - access(INTERNAL_FUNCTION("Q"."DAU_THANG"(+))=INTERNAL_FUNCTION("T
+PLAN TRUOC QR21 |		"."DAU_THANG"))
+PLAN TRUOC QR21 |    4 - filter(LEVEL<=MONTHS_BETWEEN(TO_DATE(:P_DEN_KY,'YYYY-MM'),TO_DATE
+PLAN TRUOC QR21 |		(:P_TU_KY,'YYYY-MM'))+1)
+PLAN TRUOC QR21 |    8 - filter(TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE)
+PLAN TRUOC QR21 |    9 - access("K"."KY_LUONG_ID"="P"."KY_LUONG_ID")
+PLAN TRUOC QR21 |   10 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN
+PLAN TRUOC QR21 |		"))>=1 AND EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))
+PLAN TRUOC QR21 |		<=12 AND EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2
+PLAN TRUOC QR21 |		000 AND EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=21
+PLAN TRUOC QR21 |		00)
+PLAN SAU QR08 | Plan hash value: 26924201
+PLAN SAU QR08 |
+PLAN SAU QR08 | ---------------------------------------------------------------------------------------------------------
+PLAN SAU QR08 | | Id  | Operation				      | Name			   | Rows  | Cost (%CPU)|
+PLAN SAU QR08 | ---------------------------------------------------------------------------------------------------------
+PLAN SAU QR08 | |   0 | SELECT STATEMENT			      | 			   |	 1 |	23   (5)|
+PLAN SAU QR08 | |   1 |  SORT ORDER BY				      | 			   |	 1 |	23   (5)|
+PLAN SAU QR08 | |   2 |   MERGE JOIN OUTER			      | 			   |	 1 |	22   (0)|
+PLAN SAU QR08 | |   3 |    MERGE JOIN OUTER			      | 			   |	 1 |	18   (0)|
+PLAN SAU QR08 | |   4 |     MERGE JOIN OUTER			      | 			   |	 1 |	13   (0)|
+PLAN SAU QR08 | |*  5 |      FILTER				      | 			   |	   |		|
+PLAN SAU QR08 | |   6 |       NESTED LOOPS OUTER		      | 			   |	 1 |	 9   (0)|
+PLAN SAU QR08 | |*  7 |        COUNT STOPKEY			      | 			   |	   |		|
+PLAN SAU QR08 | |*  8 | 	TABLE ACCESS BY INDEX ROWID BATCHED   | QUA_TRINH_CONG_TAC	   |	 1 |	 2   (0)|
+PLAN SAU QR08 | |*  9 | 	 INDEX RANGE SCAN		      | UK_QTCT_NV_NGAY 	   |	 1 |	 1   (0)|
+PLAN SAU QR08 | |* 10 |        VIEW				      | 			   |	 1 |	 8   (0)|
+PLAN SAU QR08 | |  11 | 	NESTED LOOPS			      | 			   |	 1 |	 6   (0)|
+PLAN SAU QR08 | |* 12 | 	 TABLE ACCESS BY INDEX ROWID	      | KY_LUONG		   |	 1 |	 1   (0)|
+PLAN SAU QR08 | |* 13 | 	  INDEX UNIQUE SCAN		      | UK_KY_LUONG_NAM_THANG	   |	 1 |	 0   (0)|
+PLAN SAU QR08 | |* 14 | 	 TABLE ACCESS FULL		      | NHAN_VIEN		   |	 1 |	 5   (0)|
+PLAN SAU QR08 | |  15 |        TABLE ACCESS BY INDEX ROWID	      | PHONG_BAN		   |	 1 |	 1   (0)|
+PLAN SAU QR08 | |* 16 | 	INDEX UNIQUE SCAN		      | PK_PHONG_BAN		   |	 1 |	 0   (0)|
+PLAN SAU QR08 | |  17 |      BUFFER SORT			      | 			   |	 1 |	12   (0)|
+PLAN SAU QR08 | |  18 |       VIEW				      | VW_LAT_A9122F2C 	   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |  19 |        VIEW				      | VW_LAT_E88661A9 	   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |  20 | 	SORT AGGREGATE			      | 			   |	 1 |		|
+PLAN SAU QR08 | |  21 | 	 TABLE ACCESS BY INDEX ROWID BATCHED  | CHAM_CONG		   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |* 22 | 	  INDEX RANGE SCAN		      | UK_CHAM_CONG_NV_NGAY	   |	 3 |	 3   (0)|
+PLAN SAU QR08 | |  23 |     BUFFER SORT 			      | 			   |	 1 |	14   (0)|
+PLAN SAU QR08 | |  24 |      VIEW				      | VW_LAT_A9122F2C 	   |	 1 |	 5   (0)|
+PLAN SAU QR08 | |  25 |       VIEW				      | VW_LAT_ACD3FD94 	   |	 1 |	 5   (0)|
+PLAN SAU QR08 | |  26 |        SORT AGGREGATE			      | 			   |	 1 |		|
+PLAN SAU QR08 | |  27 | 	NESTED LOOPS			      | 			   |	 1 |	 5   (0)|
+PLAN SAU QR08 | |  28 | 	 NESTED LOOPS			      | 			   |	 1 |	 5   (0)|
+PLAN SAU QR08 | |  29 | 	  NESTED LOOPS			      | 			   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |  30 | 	   TABLE ACCESS BY INDEX ROWID BATCHED| CHI_TIET_NGHI_PHEP	   |	 1 |	 3   (0)|
+PLAN SAU QR08 | |* 31 | 	    INDEX RANGE SCAN		      | IX17_CTNP_NV_NGAY	   |	 1 |	 2   (0)|
+PLAN SAU QR08 | |* 32 | 	   TABLE ACCESS BY INDEX ROWID	      | DON_NGHI_PHEP		   |	 1 |	 1   (0)|
+PLAN SAU QR08 | |* 33 | 	    INDEX UNIQUE SCAN		      | PK_DON_NGHI_PHEP	   |	 1 |	 0   (0)|
+PLAN SAU QR08 | |* 34 | 	  INDEX UNIQUE SCAN		      | PK_LOAI_NGHI_PHEP	   |	 1 |	 0   (0)|
+PLAN SAU QR08 | |  35 | 	 TABLE ACCESS BY INDEX ROWID	      | LOAI_NGHI_PHEP		   |	 1 |	 1   (0)|
+PLAN SAU QR08 | |  36 |    BUFFER SORT				      | 			   |	 1 |	18   (6)|
+PLAN SAU QR08 | |  37 |     VIEW				      | VW_LAT_A9122F2C 	   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |  38 |      VIEW				      | VW_LAT_3F835B8E 	   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |  39 |       SORT AGGREGATE			      | 			   |	 1 |		|
+PLAN SAU QR08 | |  40 |        NESTED LOOPS			      | 			   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |  41 | 	NESTED LOOPS			      | 			   |	 1 |	 4   (0)|
+PLAN SAU QR08 | |  42 | 	 TABLE ACCESS BY INDEX ROWID BATCHED  | DANG_KY_TANG_CA 	   |	 1 |	 3   (0)|
+PLAN SAU QR08 | |* 43 | 	  INDEX RANGE SCAN		      | IX09_OT_NV_NGAY_TRANG_THAI |	 1 |	 2   (0)|
+PLAN SAU QR08 | |* 44 | 	 INDEX UNIQUE SCAN		      | PK_LICH_LAM_VIEC	   |	 1 |	 0   (0)|
+PLAN SAU QR08 | |  45 | 	TABLE ACCESS BY INDEX ROWID	      | LICH_LAM_VIEC		   |	 1 |	 1   (0)|
+PLAN SAU QR08 | ---------------------------------------------------------------------------------------------------------
+PLAN SAU QR08 |
+PLAN SAU QR08 | Predicate Information (identified by operation id):
+PLAN SAU QR08 | ---------------------------------------------------
+PLAN SAU QR08 |
+PLAN SAU QR08 |    5 - filter(:P_PHONG IS NULL OR "B"."MA_PHONG_BAN"=:P_PHONG)
+PLAN SAU QR08 |    7 - filter(ROWNUM<=1)
+PLAN SAU QR08 |    8 - filter(NVL("Q"."NGAY_KET_THUC",TO_DATE(' 9999-12-31 00:00:00', 'syyyy-mm-dd
+PLAN SAU QR08 | 	      hh24:mi:ss'))>=LEAST(LAST_DAY(TO_DATE(TO_CHAR(:B1)||'-'||TO_CHAR(:B2)||'-01','YYYY-MM-DD')),NVL(:
+PLAN SAU QR08 | 	      B3,LAST_DAY(TO_DATE(TO_CHAR(:B4)||'-'||TO_CHAR(:B5)||'-01','YYYY-MM-DD')))))
+PLAN SAU QR08 |    9 - access("Q"."NHAN_VIEN_ID"=:B1 AND "Q"."NGAY_BAT_DAU"<=LEAST(LAST_DAY(TO_DATE(TO_CHAR(:B2)|
+PLAN SAU QR08 | 	      |'-'||TO_CHAR(:B3)||'-01','YYYY-MM-DD')),NVL(:B4,LAST_DAY(TO_DATE(TO_CHAR(:B5)||'-'||TO_CHAR(:B6)
+PLAN SAU QR08 | 	      ||'-01','YYYY-MM-DD')))))
+PLAN SAU QR08 |   10 - filter(TO_BOOLEAN("FN_CO_VAI_TRO"('HR'))=TRUE OR
+PLAN SAU QR08 | 	      TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE OR "NK"."NHAN_VIEN_ID"="FN_NHAN_VIEN_HIEN_TAI"() OR
+PLAN SAU QR08 | 	      TO_BOOLEAN("FN_CO_VAI_TRO"('MANAGER'))=TRUE AND "FN_TRUONG_PHONG_TAI_NGAY"("NK"."PHONG_BAN_ID",TR
+PLAN SAU QR08 | 	      UNC(SYSDATE@!))="FN_NHAN_VIEN_HIEN_TAI"())
+PLAN SAU QR08 |   12 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=1 AND EXTRACT(MONTH
+PLAN SAU QR08 | 	      FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=12 AND EXTRACT(YEAR FROM
+PLAN SAU QR08 | 	      INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2000 AND EXTRACT(YEAR FROM
+PLAN SAU QR08 | 	      INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=2100)
+PLAN SAU QR08 |   13 - access("K"."NAM"=TO_NUMBER(:P_NAM) AND "K"."THANG"=TO_NUMBER(:P_THANG))
+PLAN SAU QR08 |   14 - filter("N"."NGAY_VAO_LAM"<=LAST_DAY(TO_DATE(TO_CHAR("K"."NAM")||'-'||TO_CHAR("K"."THANG")|
+PLAN SAU QR08 | 	      |'-01','YYYY-MM-DD')) AND NVL("N"."NGAY_NGHI_VIEC",LAST_DAY(TO_DATE(TO_CHAR("K"."NAM")||'-'||TO_C
+PLAN SAU QR08 | 	      HAR("K"."THANG")||'-01','YYYY-MM-DD')))>=TO_DATE(TO_CHAR("K"."NAM")||'-'||TO_CHAR("K"."THANG")||'
+PLAN SAU QR08 | 	      -01','YYYY-MM-DD'))
+PLAN SAU QR08 |   16 - access("B"."PHONG_BAN_ID"(+)="NK"."PHONG_BAN_ID")
+PLAN SAU QR08 |   22 - access("C"."NHAN_VIEN_ID"="NK"."NHAN_VIEN_ID" AND
+PLAN SAU QR08 | 	      "C"."NGAY">=INTERNAL_FUNCTION("NK"."TU") AND "C"."NGAY"<=INTERNAL_FUNCTION("NK"."DEN"))
+PLAN SAU QR08 |   31 - access("CT"."NHAN_VIEN_ID"="NK"."NHAN_VIEN_ID" AND
+PLAN SAU QR08 | 	      "CT"."NGAY">=INTERNAL_FUNCTION("NK"."TU") AND "CT"."NGAY"<=INTERNAL_FUNCTION("NK"."DEN"))
+PLAN SAU QR08 |   32 - filter("D"."TRANG_THAI"='DA_DUYET')
+PLAN SAU QR08 |   33 - access("D"."DON_NGHI_ID"="CT"."DON_NGHI_ID")
+PLAN SAU QR08 |   34 - access("T"."LOAI_NGHI_ID"="D"."LOAI_NGHI_ID")
+PLAN SAU QR08 |   43 - access("O"."NHAN_VIEN_ID"="NK"."NHAN_VIEN_ID" AND
+PLAN SAU QR08 | 	      "O"."NGAY">=INTERNAL_FUNCTION("NK"."TU") AND "O"."TRANG_THAI"='DA_DUYET' AND
+PLAN SAU QR08 | 	      "O"."NGAY"<=INTERNAL_FUNCTION("NK"."DEN"))
+PLAN SAU QR08 |        filter("O"."TRANG_THAI"='DA_DUYET')
+PLAN SAU QR08 |   44 - access("L"."NGAY"="O"."NGAY")
+PLAN SAU QR17 | Plan hash value: 1513786965
+PLAN SAU QR17 |
+PLAN SAU QR17 | ----------------------------------------------------------------------------------------------
+PLAN SAU QR17 | | Id  | Operation				| Name			| Rows	| Cost (%CPU)|
+PLAN SAU QR17 | ----------------------------------------------------------------------------------------------
+PLAN SAU QR17 | |   0 | SELECT STATEMENT			|			|     1 |     7  (15)|
+PLAN SAU QR17 | |   1 |  SORT ORDER BY				|			|     1 |     7  (15)|
+PLAN SAU QR17 | |   2 |   NESTED LOOPS				|			|     1 |     6   (0)|
+PLAN SAU QR17 | |   3 |    NESTED LOOPS 			|			|     1 |     6   (0)|
+PLAN SAU QR17 | |   4 |     NESTED LOOPS			|			|     1 |     5   (0)|
+PLAN SAU QR17 | |   5 |      NESTED LOOPS			|			|     1 |     3   (0)|
+PLAN SAU QR17 | |   6 |       NESTED LOOPS			|			|     1 |     2   (0)|
+PLAN SAU QR17 | |   7 |        TABLE ACCESS BY INDEX ROWID	| NHAN_VIEN		|     1 |     1   (0)|
+PLAN SAU QR17 | |*  8 | 	INDEX UNIQUE SCAN		| UK_NHAN_VIEN_MA	|     1 |     0   (0)|
+PLAN SAU QR17 | |*  9 |        TABLE ACCESS BY INDEX ROWID	| KY_LUONG		|     1 |     1   (0)|
+PLAN SAU QR17 | |* 10 | 	INDEX UNIQUE SCAN		| UK_KY_LUONG_NAM_THANG |     1 |     0   (0)|
+PLAN SAU QR17 | |* 11 |       TABLE ACCESS BY INDEX ROWID	| PHIEU_LUONG		|     1 |     1   (0)|
+PLAN SAU QR17 | |* 12 |        INDEX UNIQUE SCAN		| UK_PHIEU_KY_NV	|     1 |     0   (0)|
+PLAN SAU QR17 | |* 13 |      TABLE ACCESS BY INDEX ROWID BATCHED| CHI_TIET_PHIEU_LUONG	|    10 |     2   (0)|
+PLAN SAU QR17 | |* 14 |       INDEX RANGE SCAN			| IX11_CTPL_PHIEU	|    10 |     1   (0)|
+PLAN SAU QR17 | |* 15 |     INDEX UNIQUE SCAN			| PK_LOAI_KHOAN_LUONG	|     1 |     0   (0)|
+PLAN SAU QR17 | |  16 |    TABLE ACCESS BY INDEX ROWID		| LOAI_KHOAN_LUONG	|     1 |     1   (0)|
+PLAN SAU QR17 | ----------------------------------------------------------------------------------------------
+PLAN SAU QR17 |
+PLAN SAU QR17 | Predicate Information (identified by operation id):
+PLAN SAU QR17 | ---------------------------------------------------
+PLAN SAU QR17 |
+PLAN SAU QR17 |    8 - access("N"."MA_NHAN_VIEN"=UPPER(:P_MA))
+PLAN SAU QR17 |    9 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=1 AND
+PLAN SAU QR17 | 	      EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=12 AND EXTRACT(YEAR
+PLAN SAU QR17 | 	      FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2000 AND EXTRACT(YEAR FROM
+PLAN SAU QR17 | 	      INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=2100)
+PLAN SAU QR17 |   10 - access("K"."NAM"=TO_NUMBER(:P_NAM) AND "K"."THANG"=TO_NUMBER(:P_THANG))
+PLAN SAU QR17 |   11 - filter(TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE OR
+PLAN SAU QR17 | 	      "P"."NHAN_VIEN_ID"="FN_NHAN_VIEN_HIEN_TAI"() AND "K"."TRANG_THAI"='DA_KHOA')
+PLAN SAU QR17 |   12 - access("K"."KY_LUONG_ID"="P"."KY_LUONG_ID" AND
+PLAN SAU QR17 | 	      "N"."NHAN_VIEN_ID"="P"."NHAN_VIEN_ID")
+PLAN SAU QR17 |   13 - filter("THANH_TIEN">=0)
+PLAN SAU QR17 |   14 - access("C"."PHIEU_LUONG_ID"="P"."PHIEU_LUONG_ID")
+PLAN SAU QR17 |   15 - access("L"."LOAI_KHOAN_ID"="C"."LOAI_KHOAN_ID")
+PLAN SAU QR18 | Plan hash value: 2597355619
+PLAN SAU QR18 |
+PLAN SAU QR18 | ----------------------------------------------------------------------------------------------
+PLAN SAU QR18 | | Id  | Operation				| Name			| Rows	| Cost (%CPU)|
+PLAN SAU QR18 | ----------------------------------------------------------------------------------------------
+PLAN SAU QR18 | |   0 | SELECT STATEMENT			|			|     5 |    13   (8)|
+PLAN SAU QR18 | |   1 |  HASH GROUP BY ROLLUP			|			|     5 |    13   (8)|
+PLAN SAU QR18 | |*  2 |   FILTER				|			|	|	     |
+PLAN SAU QR18 | |*  3 |    HASH JOIN				|			|   257 |    12   (0)|
+PLAN SAU QR18 | |   4 |     TABLE ACCESS FULL			| PHONG_BAN		|     5 |     3   (0)|
+PLAN SAU QR18 | |   5 |     NESTED LOOPS			|			|   257 |     9   (0)|
+PLAN SAU QR18 | |*  6 |      TABLE ACCESS BY INDEX ROWID	| KY_LUONG		|     1 |     1   (0)|
+PLAN SAU QR18 | |*  7 |       INDEX UNIQUE SCAN 		| UK_KY_LUONG_NAM_THANG |     1 |     0   (0)|
+PLAN SAU QR18 | |   8 |      TABLE ACCESS BY INDEX ROWID BATCHED| PHIEU_LUONG		|   257 |     8   (0)|
+PLAN SAU QR18 | |*  9 |       INDEX RANGE SCAN			| UK_PHIEU_KY_NV	|   257 |     1   (0)|
+PLAN SAU QR18 | ----------------------------------------------------------------------------------------------
+PLAN SAU QR18 |
+PLAN SAU QR18 | Predicate Information (identified by operation id):
+PLAN SAU QR18 | ---------------------------------------------------
+PLAN SAU QR18 |
+PLAN SAU QR18 |    2 - filter(TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE)
+PLAN SAU QR18 |    3 - access("PB"."PHONG_BAN_ID"="P"."PHONG_BAN_ID")
+PLAN SAU QR18 |    6 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=1 AND
+PLAN SAU QR18 | 	      EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=12 AND EXTRACT(YEAR
+PLAN SAU QR18 | 	      FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2000 AND EXTRACT(YEAR FROM
+PLAN SAU QR18 | 	      INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=2100)
+PLAN SAU QR18 |    7 - access("K"."NAM"=TO_NUMBER(:P_NAM) AND "K"."THANG"=TO_NUMBER(:P_THANG))
+PLAN SAU QR18 |    9 - access("K"."KY_LUONG_ID"="P"."KY_LUONG_ID")
+PLAN SAU QR21 | Plan hash value: 1541044005
+PLAN SAU QR21 |
+PLAN SAU QR21 | ----------------------------------------------------------------------------
+PLAN SAU QR21 | | Id  | Operation			| Name	      | Rows  | Cost (%CPU)|
+PLAN SAU QR21 | ----------------------------------------------------------------------------
+PLAN SAU QR21 | |   0 | SELECT STATEMENT		|	      |     1 |    32	(7)|
+PLAN SAU QR21 | |   1 |  WINDOW SORT			|	      |     1 |    32	(7)|
+PLAN SAU QR21 | |*  2 |   HASH JOIN OUTER		|	      |     1 |    31	(4)|
+PLAN SAU QR21 | |   3 |    VIEW 			|	      |     1 |     2	(0)|
+PLAN SAU QR21 | |*  4 |     CONNECT BY WITHOUT FILTERING|	      |       | 	   |
+PLAN SAU QR21 | |   5 |      FAST DUAL			|	      |     1 |     2	(0)|
+PLAN SAU QR21 | |   6 |    VIEW 			|	      |    36 |    29	(4)|
+PLAN SAU QR21 | |   7 |     HASH GROUP BY		|	      |    36 |    29	(4)|
+PLAN SAU QR21 | |*  8 |      FILTER			|	      |       | 	   |
+PLAN SAU QR21 | |*  9 |       HASH JOIN 		|	      |  9243 |    28	(0)|
+PLAN SAU QR21 | |* 10 |        TABLE ACCESS FULL	| KY_LUONG    |    36 |     3	(0)|
+PLAN SAU QR21 | |  11 |        TABLE ACCESS FULL	| PHIEU_LUONG |  9243 |    25	(0)|
+PLAN SAU QR21 | ----------------------------------------------------------------------------
+PLAN SAU QR21 |
+PLAN SAU QR21 | Predicate Information (identified by operation id):
+PLAN SAU QR21 | ---------------------------------------------------
+PLAN SAU QR21 |
+PLAN SAU QR21 |    2 - access(INTERNAL_FUNCTION("Q"."DAU_THANG"(+))=INTERNAL_FUNCTION("T
+PLAN SAU QR21 | 	      "."DAU_THANG"))
+PLAN SAU QR21 |    4 - filter(LEVEL<=MONTHS_BETWEEN(TO_DATE(:P_DEN_KY,'YYYY-MM'),TO_DATE
+PLAN SAU QR21 | 	      (:P_TU_KY,'YYYY-MM'))+1)
+PLAN SAU QR21 |    8 - filter(TO_BOOLEAN("FN_CO_VAI_TRO"('PAYROLL'))=TRUE)
+PLAN SAU QR21 |    9 - access("K"."KY_LUONG_ID"="P"."KY_LUONG_ID")
+PLAN SAU QR21 |   10 - filter(EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN
+PLAN SAU QR21 | 	      "))>=1 AND EXTRACT(MONTH FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))
+PLAN SAU QR21 | 	      <=12 AND EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))>=2
+PLAN SAU QR21 | 	      000 AND EXTRACT(YEAR FROM INTERNAL_FUNCTION("NGAY_CHI_TRA_DU_KIEN"))<=21
+PLAN SAU QR21 | 	      00)

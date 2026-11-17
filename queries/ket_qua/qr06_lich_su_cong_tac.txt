@@ -1,0 +1,6 @@
+-- qr06_lich_su_cong_tac   (user U_HR01, chay luc 15/11/2026 23:05)
+MA_NHAN_VIEN HO_TEN                   TEN_PHONG_BAN      TEN_CHUC_VU      NGAY_BAT_D DEN_NGAY   CAN_CU_DIEU_CHUYEN
+------------ ------------------------ ------------------ ---------------- ---------- ---------- ----------------------------------
+NV023        Đỗ Hải Lan               Phòng Kinh doanh   Nhân viên        01/05/2020 31/01/2026
+NV023        Đỗ Hải Lan               Phòng Kỹ thuật     Nhân viên        01/02/2026 hien tai   QĐ điều chuyển 012/2026/QĐ-NS
+2 rows selected.

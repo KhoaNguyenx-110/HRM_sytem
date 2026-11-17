@@ -1,0 +1,82 @@
+--- tests/att/tc19_20_23_25_hr01.sql  (user U_HR01)
+PASS  TC-19 Lich trung ngay bi tu choi (-20302)
+PASS  TC-19 Ngay le: chuan 0, quy doi 8
+PASS  TC-19 Nghi tuan: chuan 0, quy doi 0
+PASS  TC-23 Chot cong 03/2026 khi du lieu day du (0 loi)
+PASS  TC-19 Sua lich cua ky da chot cong bi tu choi (-20301)
+PASS  BR-25 Sua cong cua ky da chot bi tu choi (-20301)
+PASS  TC-20 Cong trung nguoi/ngay bi tu choi (-20304)
+PASS  TC-20 Gio lon hon chuan bi tu choi (-20306)
+PASS  BR-12 Cong + nghi vuot chuan bi tu choi (-20307)
+PASS  FR-ATT-02 Nhap cong ngay nghi tuan bi tu choi (-20305)
+PASS  TC-20 Sua cong hop le trong [0, chuan]
+PASS  TC-23 Chot cong 01/2026 co loi: tra 6 dong loi
+PASS  TC-23 Danh sach co dong THIEU_CONG cua NV_TC23
+PASS  TC-23 Danh sach co dong DON_NGHI_CHO_DUYET cua NV005
+PASS  TC-23 Co loi thi ky van MO (MO)
+PASS  TC-25 Han muc trung nguoi/nam bi tu choi (-20401)
+PASS  TC-25 Giam han muc duoi so da dung (2 ngay) bi tu choi (-20402)
+(da ROLLBACK moi thay doi thu)
+--- tests/att/tc23_setup_owner.sql  (user owner)
+--- tests/att/tc23b_hr01_xung_dot.sql  (user U_HR01)
+PASS  TC-23 Chot cong 02/2026 co xung dot: 1 loi
+PASS  TC-23 Dong loi CONG_NGHI_VUOT_CHUAN cua NV_C ngay 10/02
+--- tests/att/tc23_cleanup_owner.sql  (user owner)
+--- tests/att/tc21_26_30_nv_a.sql  (user U_NV_A)
+PASS  TC-21 OT ket thuc truoc bat dau bi tu choi (-20308)
+PASS  TC-21 OT qua ngay bi tu choi (-20309)
+PASS  TC-21 OT ban dem bi tu choi (-20309)
+PASS  BR-13 OT trung gio lam thuong bi tu choi (-20310)
+PASS  TC-21 OT chong khoang bi tu choi (-20311)
+PASS  TC-21 Hai khoang tiep giap [18,20) va [20,22) duoc chap nhan
+PASS  TC-26 Don trung buoi voi don cho bi tu choi (-20404)
+PASS  TC-26 Nghi vao ngay nghi tuan bi tu choi (-20403)
+PASS  TC-30 NV_A: cap 12, da dung 0, cho 2, con 12 (don cho tach rieng, khong
+(da ROLLBACK moi thay doi thu)
+--- tests/att/tc22_29_tp_kt.sql  (user U_TP_KT)
+PASS  VW-08 TP_KT thay OT cho cua NV_B va don nghi cho cua NV_A
+PASS  TC-22 Tu duyet OT bi tu choi (-20313)
+PASS  TC-22 Gio duyet vuot dang ky bi tu choi (-20316)
+PASS  TC-22 Duyet 1,5 gio <= dang ky 2 gio
+PASS  TC-27 Rut don cua nguoi khac bi tu choi (-20405)
+PASS  TC-29 Tu choi khong ly do bi tu choi (-20408)
+PASS  FR-LEV-04 TP duyet don nghi cua nhan vien phong minh
+(da ROLLBACK moi thay doi thu)
+--- tests/att/tc22_29_tp_kd.sql  (user U_TP_KD)
+PASS  VW-08 TP_KD khong thay don cua phong Ky thuat
+PASS  TC-22 TP_KD khong duyet duoc OT phong khac (OT duyet duoc: 0)
+PASS  TC-29 TP_KD khong duyet duoc don nghi phong khac (don duyet duoc: 0)
+PASS  Moi lan bi tu choi deu dung ma loi nghiep vu
+--- tests/att/tc29_tp_ns.sql  (user U_TP_NS)
+PASS  TC-29 HR+MANAGER tu duyet don cua minh bi tu choi (-20407)
+--- tests/att/tc27_nv_b.sql  (user U_NV_B)
+PASS  TC-27 Rut don da duyet bi tu choi (-20406)
+PASS  TC-27 Rut don cho cua minh: trang thai DA_RUT
+PASS  BR-16 Dang ky lai buoi cua don da rut
+--- tests/att/tc24_pay01.sql  (user U_PAY01)
+PASS  TC-24 OT da duyet cua NV_B thang 1 duoc cong: 3 gio
+PASS  TC-24 OT bi tu choi cua NV041 thang 3 khong cong: 0
+PASS  TC-24 OT ngay le cua NV037 thang 2 tach rieng: 4 gio
+PASS  FN-02 NV_A thang 1: 168 gio cong + 8 gio le = 176
+PASS  FN-02 NV037 thang 1: 158 gio cong, nghi om khong huong luong, + 8 le = 166
+PASS  FN-02 NV049 vao lam 15/01: chi tinh tu ngay vao lam (96 gio)
+PASS  TC-24 Payroll thay ky 03/2026 cua 50 nhan vien (gom nguoi nghi viec giua
+--- TC-26: dang ky nghi trong ky da chot cong
+--- tests/att/tc26_chot_hr01.sql  (user U_HR01)
+PASS  TC-26 Chuan bi: chot cong 03/2026 (0 loi)
+--- tests/att/tc26b_nv_a.sql  (user U_NV_A)
+PASS  TC-26 Nghi trong ky da chot cong bi tu choi toan don (-20301)
+--- tests/att/tc26_restore_owner.sql  (user owner)
+--- tests/att/tc_tr03_owner.sql  (user owner)
+PASS  TR-03 UPDATE truc tiep CHAM_CONG thang da chot bi chan (-20301)
+PASS  TR-03 DELETE truc tiep CHAM_CONG thang da chot bi chan (-20301)
+PASS  TR-03 UPDATE truc tiep LICH_LAM_VIEC thang da chot bi chan (-20301)
+PASS  TR-03 UPDATE truc tiep DANG_KY_TANG_CA thang da chot bi chan (-20301)
+PASS  TR-03 UPDATE truc tiep CHI_TIET_NGHI_PHEP thang da chot bi chan (-20301)
+--- TC-28: hai phien duyet dong thoi
+--- tests/att/tc28_setup_tp_kd.sql  (user U_TP_KD)
+PASS  TC-28 Chuan bi: 2 don 6 ngay (17, 18)
+PASS  TC-28 Phien 2 (U_HR02) cho khoa 4 giay roi bi tu choi (-20409): Không đủ
+PASS  TC-28 Phien 1 (U_HR01) duyet don 1, giu khoa 6 giay
+--- tests/att/tc28_cleanup_owner.sql  (user owner)
+PASS  TC-28 So du NV019 sau hai phien: 5 ngay (khong am)

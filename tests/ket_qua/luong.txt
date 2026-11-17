@@ -1,0 +1,158 @@
+=== Dung lai CSDL tu dau
+=== TC-31, TC-35: tao ky, tinh khi chua chot cong
+--- tests/pay/tc31_35_pay01.sql  (user U_PAY01)
+PASS  BR-38 Goi truc tiep danh_dau_tinh_lai bi chan boi ACCESSIBLE BY (-6550)
+PASS  TC-31 Tao ky trung 01/2026 bi tu choi (-20510): Kỳ lương của tháng/năm này
+PASS  TC-31 Tao ky thang 13 bi tu choi (-20511): Kỳ 13/2026 không hợp lệ: tháng
+PASS  TC-31 Ngay chi tra ngoai thang bi tu choi (-20512)
+PASS  TC-35 Tinh ky chua chot cong bi tu choi (-20503): Kỳ 01/2026 chưa chốt
+PASS  TC-35 Khong co phieu nao duoc ghi: 0
+PASS  TC-31 Tao ky hop le 12/2025 (MO)
+--- tests/pay/tc35_45_hr01.sql  (user U_HR01)
+PASS  Chot cong 12/2025: 0 loi
+PASS  Chot cong 01/2026: 0 loi
+PASS  Chot cong 02/2026: 0 loi
+--- tests/pay/tc45_hr02.sql  (user U_HR02)
+PASS  U_HR02 duyet quyet dinh TC45/2026 do U_HR01 tao
+=== TC-35b, TC-33, TC-45, TC-34a: truoc khi tinh
+--- tests/pay/tc32_33_34_45_pay01.sql  (user U_PAY01)
+PASS  TC-35 Tinh ky 12/2025 thieu chinh sach bi tu choi (-20513): Không có chính
+PASS  TC-35 Khong co phieu 12/2025 nao: 0
+PASS  TC-33 Phu cap chong cung loai bi tu choi (-20518): NV_B đã có phụ cấp
+PASS  TC-33 Phu cap khong tron thang bi tu choi (-20527): Phụ cấp có hiệu lực từ
+PASS  TC-33 Khoan khong phai phu cap bi tu choi (-20519): Khoản "LUONG_CONG"
+PASS  TC-33 Phu cap trach nhiem NV_B chi trong thang 01/2026
+PASS  TC-45 Chuyen thuong 001/2026 (12.000.000) vao ky 01/2026
+PASS  TC-45 Chuyen thuong lan hai bi tu choi (-20507): Quyết định 001/2026/QĐ-KT
+PASS  TC-45 Chuyen thuong chua duyet bi tu choi (-20508): Chỉ chuyển thưởng TIỀN
+PASS  TC-34 Ghi phat sinh cho NV_B (CHO_DUYET)
+PASS  TC-34 Phat sinh so tien 0 bi tu choi (-20522): Phát sinh phải có số tiền >
+PASS  TC-34 Phat sinh khoan khong THEO_PHAT_SINH bi tu choi (-20519): Khoản
+=== TC-36, TC-37: tinh ky 01/2026, vi du muc 9.8
+--- tests/pay/tc36_37_pay01.sql  (user U_PAY01)
+PASS  TC-36 Tinh ky 01/2026: 0 loi
+PASS  TC-36 Ky 01/2026 -> DA_TINH, phien ban da tinh = dau vao (3)
+PASS  TC-36 So phieu ky 01/2026: 50 (50 nguoi lam viec trong thang)
+PASS  QR-23 Phieu lech chi tiet: 0
+PASS  TC-36 1 Luong theo cong			      26,400,000   mong doi
+PASS  TC-36 2 OT (4 x 150.000 x 1,5)			 900,000   mong doi
+PASS  TC-36 3 Gross				      39,300,000   mong doi
+PASS  TC-36 4 Bao hiem NLD			       2,772,000   mong doi
+PASS  TC-36 5 TNCT (OT mien thue)		      38,400,000   mong doi
+PASS  TC-36 6 TNTT				      13,928,000   mong doi
+PASS  TC-36 7 Thue TNCN 				 892,800   mong doi
+PASS  TC-36 8 NET (dap an)			      35,635,200   mong doi
+PASS  TC-36 9 Bao hiem NSDLD			       5,676,000   mong doi
+PASS  TC-36 10 Chi phi mo hinh			      44,976,000   mong doi
+PASS  BR-27 Net = gross - BH NLD - thue - khau tru (BH NSDLD khong tru)
+PASS  FN-01 TNTT 0					       0   mong doi 0
+PASS  FN-01 TNTT 10.000.000				 500,000   mong doi
+PASS  FN-01 TNTT 10.000.001				 500,000   mong doi
+PASS  FN-01 TNTT 30.000.000			       2,500,000   mong doi
+PASS  FN-01 TNTT 30.000.001			       2,500,000   mong doi
+PASS  FN-01 TNTT 60.000.000			       8,500,000   mong doi
+PASS  FN-01 TNTT 60.000.001			       8,500,000   mong doi
+PASS  FN-01 TNTT 100.000.000			      20,500,000   mong doi
+PASS  FN-01 TNTT 100.000.001			      20,500,000   mong doi
+PASS  FN-01 TNTT 100.000.010 (35%)		      20,500,004   mong doi
+PASS  FN-01 TNTT am -> 0				       0   mong doi 0
+PASS  FN-04 OT 4 gio ngay thuong don gia 150.000	 900,000   mong doi
+PASS  FN-04 OT 2 gio ngay le (he so 3)			 900,000   mong doi
+PASS  FN-05 Can cu BHXH 65 trieu -> tran	      46,800,000   mong doi
+PASS  FN-05 Can cu BHTN 65 trieu (duoi tran)	      65,000,000   mong doi
+PASS  FN-05 Can cu 3 trieu -> san		       5,310,000   mong doi
+PASS  FN-05 NV001 BHXH NLD tren phieu (46,8tr x 8%     3,744,000   mong doi
+PASS  FN-05 NV001 BHTN NLD tren phieu (65tr x 1%)	 650,000   mong doi
+PASS  TC-37 NV_B gio huong luong thang co ngay le	     176   mong doi 176
+PASS  TC-37 NV_B luong theo cong = luong hop dong     24,000,000   mong doi
+PASS  TC-34 Phat sinh chua duyet khong vao phieu N	       0   mong doi 0
+PASS  TC-33 Phu cap con hieu luc vao phieu 01/2026     2,000,000   mong doi
+PASS  NV049 vao giua thang: gio huong luong		      96   mong doi 96
+PASS  NV049 luong theo cong = round(L x 96/176)        5,345,455   mong doi
+=== TC-39: tinh lai cung dau vao
+--- tests/pay/tc39_pay01.sql  (user U_PAY01)
+PASS  TC-39 Tinh lai lan 1: 50 phieu, gross 934,346,481, net 828,219,228 (truoc:
+PASS  TC-39 Lan 1 ghi lai phieu moi (ID nho nhat 1 -> 51), khong giu phieu cu
+PASS  TC-39 Tinh lai lan 2: 50 phieu, gross 934,346,481, net 828,219,228 (truoc:
+PASS  TC-39 Lan 2 ghi lai phieu moi (ID nho nhat 51 -> 101), khong giu phieu cu
+=== TC-40: loi giua lan tinh lai
+--- tests/pay/tc40_setup_owner.sql  (user owner)
+Da tao trigger tc40_loi_co_chu_dich (NV_B id 35)
+--- tests/pay/tc40_pay01.sql  (user U_PAY01)
+PASS  TC-40 Tinh lai gap loi giua chung (-20999): TC-40 loi co chu dich khi ghi
+PASS  TC-40 Ket qua cu con nguyen: 50 phieu, 476 dong, ID 101..150
+PASS  TC-40 Ky van DA_TINH
+--- tests/pay/tc40_cleanup_owner.sql  (user owner)
+Da xoa trigger tc40_loi_co_chu_dich
+=== TC-34c, TC-38: phat sinh sau khi tinh, net am
+--- tests/pay/tc34_38_pay01_lap.sql  (user U_PAY01)
+PASS  TC-34 Them phat sinh sau khi tinh: DA_TINH -> CHOT_CONG, phien ban dau vao
+--- tests/pay/tc38_hr02.sql  (user U_HR02)
+PASS  VW-08 HR thay phat sinh cho duyet 6
+PASS  Ket qua duyet sai bi tu choi (-20523)
+PASS  U_HR02 duyet phat sinh TC-38
+PASS  Duyet lai phat sinh da xu ly bi tu choi (-20523)
+--- tests/pay/tc38_pay01_tinh.sql  (user U_PAY01)
+Danh sach loi: NET_AM | NV_C | net = -86,740,000 (gross 14,730,000, khấu trừ
+PASS  TC-38 Tinh ky co net am: 1 loi, co NET_AM | NV_C
+PASS  TC-38 Khong phieu nao cua ky bi ghi lai (ket qua cu giu nguyen)
+--- tests/pay/tc38_cleanup_owner.sql  (user owner)
+Da xoa 1 phat sinh TC-38
+=== TC-42, TC-34b, TC-45b: khoa ky va sau khoa
+--- tests/pay/tc42_pay01.sql  (user U_PAY01)
+PASS  TC-42 Khoa ky phien ban lech (5 <> 3) bi tu choi (-20504): Đầu vào kỳ
+PASS  TC-42 Tinh lai ky 01 sau khi go phat sinh loi: 0 loi
+PASS  TC-42 Khoa ky 01/2026: DA_KHOA
+PASS  TC-42 Tinh lai ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã khóa, không
+PASS  TC-42 Khoa lai ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã khóa.
+PASS  TC-34 Ghi phat sinh vao ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã
+PASS  TC-45 Chuyen thuong vao ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã
+PASS  BR-38 Sua phu cap thuoc ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã
+PASS  TC-42 Payroll sua truc tiep chi tiet phieu: khong co quyen (-942)
+PASS  BR-32 Phieu goc cua nguoi khac bi tu choi (-20521): Phiếu gốc phải là
+PASS  BR-32 Dieu chinh ky 01 (da khoa) ghi o ky 02, tham chieu phieu goc
+PASS  TC-45 Chuyen thuong TC45/2026 vao ky 02/2026
+--- tests/pay/tc42_owner.sql  (user owner)
+PASS  TR-02 Sua chi tiet phieu ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã
+PASS  TR-02 Xoa phieu ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã khóa: không
+PASS  TR-02 Them phat sinh vao ky da khoa bi tu choi (-20501): Kỳ 01/2026 đã
+PASS  TR-04 Sua he so OT chinh sach da dung bi tu choi (-20509): Phiên bản chính
+PASS  TR-04 Sua giam tru chinh sach da dung bi tu choi (-20509): Phiên bản chính
+PASS  TR-04 Xoa bac thue chinh sach da dung bi tu choi (-20509): Phiên bản chính
+PASS  TR-04 Chi dong hieu luc 31/12/2026 (ky khoa van trong khoang) -> cho phep
+=== TC-32: chinh sach theo phien ban
+--- tests/pay/tc32_pay01.sql  (user U_PAY01)
+PASS  TC-32 Chinh sach chong hieu luc bi tu choi (-20514): Khoảng hiệu lực
+PASS  TC-32 Sua chinh sach da dung o ky 01 da khoa bi tu choi (-20509): Phiên
+PASS  TC-32 Dong hieu luc phien ban 2026 den 31/12/2026
+PASS  TC-32 Bac thue ho bi tu choi (-20515): Biểu thuế hở/chồng giữa bậc 1 và
+PASS  TC-32 Thieu loai bao hiem bi tu choi (-20516): Cần đủ tỷ lệ 4 loại bảo
+PASS  TC-32 He so OT ngay le duoi muc luat bi tu choi (-20517): Hệ số OT LE =
+PASS  TC-32 JSON sai cu phap bi tu choi (-20528): Dữ liệu JSON của chính sách
+không hợp lệ: ORA-40441: JSON syntax error
+PASS  TC-32 Hieu luc tu giua thang bi tu choi (-20531): Chính sách không hợp lệ:
+PASS  TC-32 Tao phien ban 2027 hop le (id 7)
+=== TC-41: hai phien cung tinh ky 02/2026
+PASS  TC-41 Phien 2 cho 5 giay roi bao ban (-20502): Kỳ 02/2026 đang được xử lý
+PASS  TC-41 Phien 1 tinh ky 02/2026 (0 loi), giu khoa 8 giay
+--- tests/pay/tc41_kiem_tra_pay01.sql  (user U_PAY01)
+PASS  TC-41 Ky 02/2026 DA_TINH: 50 phieu cho 50 nguoi (khong trung)
+PASS  TC-33 Phu cap het hieu luc (31/01) khong vao phieu 02: 0
+PASS  TC-45 Thuong TC45/2026 vao phieu 02 cua NV_B: 1000000
+PASS  TC-34 Dieu chinh NV_A chua duyet chua vao phieu 02: 0
+=== TC-43: nhan vien xem phieu
+--- tests/pay/tc43_nv_a.sql  (user U_NV_A)
+PASS  TC-43 NV_A xem phieu 01/2026 (da khoa): 11 dong, net 35,635,200
+PASS  TC-43 Xem phieu cua NV_B: 0 dong
+PASS  TC-43 Moi dong VW-05 deu cua chinh minh (dong cua nguoi khac: 0)
+PASS  TC-43 Xem phieu ky 02/2026 chua khoa: 0 dong
+PASS  TC-43 NV xem VW-04 quy luong: khong co quyen (-942)
+PASS  TC-43 NV goi pkg_payroll: khong co quyen (-6550)
+=== TC-46: ky luat khong sinh khoan luong
+--- tests/pay/tc46_hr01.sql  (user U_HR01)
+PASS  TC-46 U_HR01 ghi ky luat TC46/2026 cho NV010
+--- tests/pay/tc46_owner.sql  (user owner)
+PASS  TC-46 Ky luat da ghi: 1; phat sinh luong cua NV010: 0
+PASS  TC-46 Khong co trigger tren KY_LUAT: 0
+=== Tra CSDL ve du lieu mau
+Da dung lai CSDL

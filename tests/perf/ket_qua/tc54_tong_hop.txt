@@ -1,0 +1,16 @@
+TC-54 - Ngay do: 16/11/2026 16:59
+
+NFR-08 Tinh ky (sp_tinh_luong_ky, 36 ky, U_PAY01):
+  36 ky, trung binh 0.62 s/ky; ky lau nhat 2023-04: 201 phieu, 0.92 s (muc nghiem thu: ghi thoi gian; muc tieu <= 30 s)
+
+NFR-07 / plan: 30 lan moi truy van, 1 phien (ms; gets = logical reads/lan)
+  QR    | TRUOC p50 / p95 / max    | SAU p50 / p95 / max      | gets truoc>sau   | dong/lan
+  QR08  |  1151.4 /  1918.7 /  1927.5 |    20.9 /    29.1 /    75.4 |  237693 > 3765   | 100
+  QR17  |     5.7 /     8.6 /    28.2 |     0.2 /     0.4 /    16.6 |     718 > 29     | 10
+  QR18  |     0.7 /     1.2 /    12.7 |     0.4 /     0.6 /     6.4 |     100 > 19     | 6
+  QR21  |     2.0 /     2.7 /     8.3 |     2.0 /     3.3 /     7.9 |      98 > 98     | 12
+  QR08 voi VW-03 ban dau: TRUOC p50 683.6 / p95 877.8 ms, 125921 gets; SAU p50 349.6 / p95 472.2 ms, 18867 gets
+
+NFR-06: 10 phien U_PAY01 dong thoi, moi phien 20 lan QR-17 + 20 lan QR-08 (ms)
+  QR17: 200 mau, p50 0.3, p95 16.5, max 349.3 (muc tieu p95 <= 2000)
+  QR08: 200 mau, p50 42.2, p95 452.4, max 645.7 (muc tieu p95 <= 2000)

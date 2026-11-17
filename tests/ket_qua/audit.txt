@@ -1,0 +1,58 @@
+=== Dung lai CSDL va du lieu luong demo
+Da chot cong 01/2026: 0 loi
+Da chot cong 02/2026: 0 loi
+Da chot cong 03/2026: 0 loi
+Da tinh ky 01/2026 va khoa
+Da tinh ky 02/2026 va khoa
+Da tinh ky 03/2026 (tam tinh)
+=== TC-52: thao tac nhay cam
+--- tests/audit/tc52_1_hr01.sql  (user U_HR01)
+PASS  TC-52 Hop dong chong hieu luc bi tu choi (-20205)
+Da COMMIT thay doi cua U_HR01
+--- tests/audit/tc52_2_pay01.sql  (user U_PAY01)
+Da COMMIT phat sinh 5 (CHO_DUYET)
+--- tests/audit/tc52_3_hr02.sql  (user U_HR02)
+Da COMMIT duyet phat sinh 5
+--- tests/audit/tc52_4_pay01.sql  (user U_PAY01)
+PASS  TC-52 Tinh lai ky 03/2026: 0 loi
+PASS  TC-52 Them phat sinh vao ky da khoa bi tu choi (-20501)
+=== TC-52: doi chieu audit va thu xoa
+--- tests/audit/tc52_5_hr01_kiem_tra.sql  (user U_HR01)
+PASS  TC-52 NHAN_VIEN UPDATE boi nv005: email nv.c@hrm.example.com -> nv.c.tc52@hrm.example.com
+PASS  TC-52 MUC_LUONG_HOP_DONG INSERT boi nv005: luong moi 28000000
+PASS  TC-52 Hop dong bi tu choi khong co dong audit (0)
+PASS  TC-52 HAN_MUC_PHEP_NAM UPDATE boi nv005: dieu chinh 0 -> 1
+PASS  TC-52 Dong audit cua nv005 thieu thoi diem/truoc/sau: 0
+PASS  TC-52 U_HR01 khong thay audit phieu/ky/phat sinh (0 dong)
+PASS  TC-52 U_HR01 DELETE bang nhat ky bi tu choi (-942)
+PASS  TC-52 U_HR01 TRUNCATE bang nhat ky bi tu choi (-942)
+PASS  TC-52 U_HR01 DELETE qua VW-10 bi tu choi (-41900)
+PASS  TC-52 U_HR01 UPDATE qua VW-10 bi tu choi (-41900)
+--- tests/audit/tc52_6_pay01_kiem_tra.sql  (user U_PAY01)
+PASS  TC-52 PHAT_SINH_LUONG INSERT boi nv012 (2.000.000, CHO_DUYET)
+PASS  TC-52 PHAT_SINH_LUONG UPDATE boi nv006: CHO_DUYET -> DA_DUYET
+TK    Ky 03 audit: nv012:CHOT_CONG>DA_TINH(v0) ; nv012:DA_TINH>CHOT_CONG(v1) ; nv006:CHOT_CONG>CHOT_CONG(v2) ; nv012:CHOT_CONG>DA_TINH(v2) ; nv012:DA_TINH>DA_KHOA(v2)
+PASS  TC-52 KY_LUONG ky 03: co dong DA_TINH -> DA_KHOA boi nv012
+PASS  TC-52 KY_LUONG ky 03: duyet phat sinh (nv006) tang phien ban dau vao
+PASS  TC-52 PHIEU_LUONG ky 03: 50 phieu; audit DELETE 50, INSERT 100 (demo + tinh lai)
+PASS  TC-52 Phieu NV_C ky 03: gross 14968636 -> 16968636 (tang 2000000)
+PASS  TC-52 U_PAY01 khong thay audit ho so/han muc/tai khoan (0 dong)
+PASS  TC-52 U_PAY01 DELETE bang nhat ky bi tu choi (-942)
+PASS  TC-52 U_PAY01 DELETE qua VW-10 bi tu choi (-41900)
+PASS  TC-52 U_PAY01 UPDATE qua VW-10 bi tu choi (-41900)
+--- tests/audit/tc52_7_owner.sql  (user owner)
+PASS  TC-52 Owner DELETE nhat ky bi tu choi (-20021)
+PASS  TC-52 Owner UPDATE nhat ky bi tu choi (-20021)
+PASS  TC-52 So dong nhat ky khong doi: 592 -> 592
+PASS  TC-52 270 dong audit do user nghiep vu ghi, 0 dong thieu nguoi/thoi diem
+TK    HAN_MUC_PHEP_NAM	  UPDATE 1
+TK    KY_LUONG		  UPDATE 13
+TK    MUC_LUONG_HOP_DONG  INSERT 1
+TK    MUC_LUONG_HOP_DONG  UPDATE 1
+TK    NHAN_VIEN 	  UPDATE 1
+TK    PHAT_SINH_LUONG	  INSERT 2
+TK    PHAT_SINH_LUONG	  UPDATE 1
+TK    PHIEU_LUONG	  DELETE 50
+TK    PHIEU_LUONG	  INSERT 200
+=== Tra CSDL ve du lieu mau
+Da dung lai CSDL

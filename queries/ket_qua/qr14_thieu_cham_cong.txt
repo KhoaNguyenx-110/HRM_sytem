@@ -1,0 +1,14 @@
+-- qr14_thieu_cham_cong   (user owner, chay luc 15/11/2026 23:05)
+MA_NHAN_VIEN HO_TEN                   SO_NGAY_THIEU NGAY_DAU   NGAY_CUOI
+------------ ------------------------ ------------- ---------- ----------
+NV001        Vũ Thanh Hương                      20 01/04/2026 29/04/2026
+NV002        Dương Hoàng Quyên                   20 01/04/2026 29/04/2026
+NV003        Phan Hải Dũng                       20 01/04/2026 29/04/2026
+NV004        Ngô Minh Linh                       20 01/04/2026 29/04/2026
+NV005        Huỳnh Ngọc Thảo                     20 01/04/2026 29/04/2026
+NV006        Hồ Đức Hải                          20 01/04/2026 29/04/2026
+NV007        Hoàng Thị Nam                       20 01/04/2026 29/04/2026
+NV008        Đỗ Quốc Tuấn                        20 01/04/2026 29/04/2026
+NV009        Phạm Thu Hoa                        20 01/04/2026 29/04/2026
+NV010        Bùi Văn Phúc                        20 01/04/2026 29/04/2026
+10 rows selected.

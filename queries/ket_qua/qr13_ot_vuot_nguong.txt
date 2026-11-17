@@ -1,0 +1,7 @@
+-- qr13_ot_vuot_nguong   (user U_HR01, chay luc 15/11/2026 23:05)
+MA_NHAN_VIEN HO_TEN                   MA_PHONG_BAN OT_NGAY_THUONG OT_NGHI_TUAN      OT_LE TONG_GIO_OT
+------------ ------------------------ ------------ -------------- ------------ ---------- -----------
+NV037        Hoàng Thị Nam            KY_THUAT                  0            0          4           4
+NV038        Đỗ Quốc Tuấn             KY_THUAT                  0            4          0           4
+NV_A         Ngô Minh Linh            KY_THUAT                  4            0          0           4
+3 rows selected.

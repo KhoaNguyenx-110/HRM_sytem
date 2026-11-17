@@ -1,0 +1,9 @@
+-- qr16_phep_vuot_han_muc   (user U_HR01, chay luc 15/11/2026 23:05)
+no rows selected
+MA_NHAN_VIEN HO_TEN                      HAN_MUC SO_NGAY_DA_DUNG
+------------ ------------------------ ---------- ---------------
+NV_B         Huỳnh Ngọc Thảo                  12               2
+NV005        Huỳnh Ngọc Thảo                  12               1
+NV019        Ngô Thu Vy                       12               1
+NV_C         Huỳnh Văn Hùng                   12              ,5
+4 rows selected.

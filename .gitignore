@@ -1,0 +1,10 @@
+.env
+*.log
+exports/
+scripts/tmp/
+backup/
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+web/ui/dist/

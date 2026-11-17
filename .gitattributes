@@ -1,0 +1,12 @@
+# Script chay trong bash va trong container Linux: luon giu LF,
+# ke ca khi clone tren Windows co core.autocrlf=true.
+* text=auto
+*.sh   text eol=lf
+*.sql  text eol=lf
+*.rman text eol=lf
+*.py   text eol=lf
+.env*  text eol=lf
+
+*.pdf binary
+*.zip binary
+*.png binary

@@ -1,0 +1,26 @@
+-- qr02_nhan_su_phong_tai_ngay   (user U_HR01, chay luc 15/11/2026 23:04)
+MA_PHONG_BAN MA_NHAN_VIEN HO_TEN                   TEN_CHUC_VU      NGAY_BAT_D NGAY_KET_T
+------------ ------------ ------------------------ ---------------- ---------- ----------
+KINH_DOANH   NV019        Ngô Thu Vy               Trưởng phòng     01/04/2017
+KINH_DOANH   NV021        Hồ Thanh Quân            Chuyên viên      01/02/2020
+KINH_DOANH   NV022        Hoàng Hoàng Chi          Nhân viên        01/12/2025
+KINH_DOANH   NV023        Đỗ Hải Lan               Nhân viên        01/05/2020 31/01/2026
+KINH_DOANH   NV024        Phạm Minh Tâm            Chuyên viên      01/01/2022
+KINH_DOANH   NV025        Bùi Ngọc Hà              Nhân viên        01/03/2022
+KINH_DOANH   NV026        Lê Đức Mai               Nhân viên        01/05/2022
+KINH_DOANH   NV027        Đặng Thị Trung           Chuyên viên      01/07/2022
+KINH_DOANH   NV028        Trần Quốc Hiếu           Nhân viên        01/09/2022
+KINH_DOANH   NV029        Võ Thu Phong             Nhân viên        01/11/2022
+KINH_DOANH   NV030        Nguyễn Văn An            Chuyên viên      01/01/2023
+KINH_DOANH   NV031        Vũ Thanh Hương           Nhân viên        01/03/2023
+KINH_DOANH   NV032        Dương Hoàng Quyên        Nhân viên        01/05/2023
+KINH_DOANH   NV_C         Huỳnh Văn Hùng           Nhân viên        01/01/2022
+14 rows selected.
+PHONG          CHUC_VU                SO_NGUOI
+-------------- -------------------- ----------
+KINH_DOANH     Chuyên viên                   4
+KINH_DOANH     Nhân viên                     9
+KINH_DOANH     Trưởng phòng                  1
+KINH_DOANH     (cong phong)                 14
+== TONG        (cong phong)                 14
+5 rows selected.

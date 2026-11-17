@@ -1,0 +1,60 @@
+### 1/4 SYS: owner, context, role, HRM_APP
+HRM_OWNER da ton tai, bo qua buoc tao
+### 2/4 OWNER: uninstall + install
+Da xoa 97 doi tuong
+=== 01 Mien du lieu
+=== 02 Bang (32)
+=== 03 Khoa ngoai
+=== 04 Index
+=== 05 PL/SQL: danh tinh phien (FN-06, SP-28, SP-27, TR-05)
+=== 06 PL/SQL: tai khoan, to chuc, ho so, quyet dinh (GD 4a)
+=== 07 PL/SQL: cong, OT, nghi phep (GD 4b)
+=== 08 PL/SQL: tinh luong (GD 4c)
+=== 09 PL/SQL: view bao cao (GD 5)
+=== 10a PL/SQL: danh muc cho kenh web (GD 7)
+=== 10 Cap quyen
+=== TC-53 Kiem tra sau cai dat
+PASS  TC-53 Doi tuong INVALID			 thuc te = 0, mong doi = 0
+PASS  So bang					 thuc te = 32, mong doi = 32
+PASS  So domain 				 thuc te = 5, mong doi = 5
+PASS  So khoa ngoai				 thuc te = 57, mong doi = 57
+PASS  FK co ON DELETE (BR-33)			 thuc te = 0, mong doi = 0
+PASS  Bang thieu chu thich			 thuc te = 0, mong doi = 0
+PASS  Unique index ham IX-02, IX-14		 thuc te = 2, mong doi = 2
+### 3/4 OWNER: seed
+=== Seed 01 Danh muc, chinh sach 2026, lich 2026
+=== Seed 02 Du lieu demo
+=== Kiem tra du lieu mau
+PASS  50 nhan vien						 thuc te = 50, mong doi = 50
+PASS  5 phong co nhan su					 thuc te = 5, mong doi = 5
+PASS  11 tai khoan anh xa user demo (muc 12.2)			 thuc te = 11, mong doi = 11
+PASS  Tai khoan nhan vien thieu vai tro EMPLOYEE		 thuc te = 0, mong doi = 0
+PASS  Hc thang 01/2026 (gio quy doi chuan)			 thuc te = 176, mong doi = 176
+PASS  Lich du 365 ngay nam 2026 				 thuc te = 365, mong doi = 365
+PASS  NV_A gio lam thuc te thang 01/2026			 thuc te = 168, mong doi = 168
+PASS  NV_A luong 26.400.000					 thuc te = 26400000, mong doi = 26400000
+PASS  NV_A OT da duyet thang 01/2026 (gio)			 thuc te = 4, mong doi = 4
+PASS  NV_A 1 nguoi phu thuoc da xac minh			 thuc te = 1, mong doi = 1
+PASS  BR-12 cong + nghi vuot chuan ngay 			 thuc te = 0, mong doi = 0
+PASS  BR-09 cong ngoai thoi gian lam viec			 thuc te = 0, mong doi = 0
+PASS  Ngay lam viec thieu cong (01-03/2026)			 thuc te = 0, mong doi = 0
+PASS  BR-06 phong khong co dung 1 truong phong			 thuc te = 0, mong doi = 0
+PASS  BR-08 phan cong chong khoang				 thuc te = 0, mong doi = 0
+PASS  CON_HIEU_LUC lech trang thai don				 thuc te = 0, mong doi = 0
+PASS  Don nghi co du 4 trang thai				 thuc te = 4, mong doi = 4
+PASS  Hop dong het han trong 30 ngay tu 15/11/2026		 thuc te = 2, mong doi = 2
+PASS  OT ngay le da duyet					 thuc te = 1, mong doi = 1
+PASS  Nhan vien nghi viec giua ky				 thuc te = 1, mong doi = 1
+PASS  Tai khoan KHOA (NV_KHOA, NV050)				 thuc te = 2, mong doi = 2
+### 4/4 SYS: user demo
+User demo U_ADMIN    san sang
+User demo U_HR01     san sang
+User demo U_HR02     san sang
+User demo U_NV_A     san sang
+User demo U_NV_B     san sang
+User demo U_NV_C     san sang
+User demo U_NV_KHOA  san sang
+User demo U_PAY01    san sang
+User demo U_TP_KD    san sang
+User demo U_TP_KT    san sang
+User demo U_TP_NS    san sang

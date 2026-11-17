@@ -1,0 +1,6 @@
+-- qr23_doi_chieu_phieu   (user U_PAY01, chay luc 15/11/2026 23:05)
+no rows selected
+  SO_PHIEU SO_DONG_CHI_TIET TONG_NET
+---------- ---------------- ----------------
+        50              475 826.467.591
+1 row selected.

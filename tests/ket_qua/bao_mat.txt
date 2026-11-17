@@ -1,0 +1,34 @@
+--- tests/security/tc01_dang_nhap_nhieu_vai_tro.sql  (user U_TP_NS)
+[U_TP_NS] TAI_KHOAN_ID=4 NHAN_VIEN_ID=4 VAI_TRO=,EMPLOYEE,HR,MANAGER,
+PASS  TC-01 Co danh tinh phien sau dang nhap
+PASS  TC-01 Phien co vai tro HR
+PASS  TC-01 Phien co vai tro MANAGER
+PASS  TC-01 Kenh DBEAVER
+--- tests/security/tc05_tai_khoan_khoa.sql  (user U_NV_KHOA)
+PASS  TC-05 Tai khoan KHOA khong co danh tinh phien
+PASS  TC-05 Khong co vai tro trong phien
+PASS  TC-05 Procedure tu choi tai khoan KHOA (-20003)
+--- tests/security/tc07_chong_gia_danh.sql  (user U_NV_A)
+[U_NV_A] TEN_DANG_NHAP=nv_a
+PASS  TC-07 Goi pkg_ctx.dat_phien de gia danh (-6550)
+PASS  TC-07 DBMS_SESSION.SET_CONTEXT tren HRM_CTX (-1031)
+PASS  TC-07 Doc hash mat khau nguoi khac (-20002)
+PASS  TC-07 Tu khoa tai khoan nguoi khac (-20002)
+PASS  TC-07 Danh tinh phien giu nguyen
+PASS  TC-06 Doi mat khau voi mat khau cu sai (-20004)
+--- tests/security/tc_kenh_web.sql  (user HRM_APP)
+PASS  SP-27 Lay hash theo ten (khong phan biet hoa/thuong)
+PASS  SP-27 Trang thai HOAT_DONG
+PASS  SP-27 Ten khong ton tai tra NULL, khong bao loi rieng
+PASS  SP-28 dat_phien nap dung tai khoan
+PASS  SP-28 dat_phien nap vai tro EMPLOYEE
+PASS  SP-28 Kenh WEB
+PASS  TC-06 Luu mat khau ro bi chan (-20006)
+PASS  TC-06 Mat khau moi trung cu bi chan (-20005)
+PASS  SP-28 xoa_phien xoa het danh tinh (IT-04)
+PASS  BR-04 dat_phien tai khoan KHOA bi tu choi (-20001)
+PASS  BR-04 dat_phien tai khoan khong ton tai bi tu choi (-20001)
+PASS  TC-02 Sai 4 lan van HOAT_DONG
+PASS  TC-02 Sai lan thu 5 chuyen KHOA
+--- Khoi phuc du lieu
+Da mo lai tai khoan nv_c

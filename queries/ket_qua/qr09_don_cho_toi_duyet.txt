@@ -1,0 +1,12 @@
+-- qr09_don_cho_toi_duyet   (user U_TP_KT, chay luc 15/11/2026 23:05)
+LOAI_YEU_CAU     SO_YEU_CAU TONG_SO_LUONG SOM_NHAT
+---------------- ---------- ------------- ----------
+NGHI_PHEP                 1             4 13/04/2026
+OT                        1             2 15/04/2026
+2 rows selected.
+LOAI_YEU_CAU     MA_YEU_CAU MA_NHAN_VIEN HO_TEN                   NOI_DUNG                       TU_NGAY    DEN_NGAY     SO_LUONG LY_DO
+---------------- ---------- ------------ ------------------------ ------------------------------ ---------- ---------- ---------- ------------------------------
+NGHI_PHEP                 9 NV_A         Ngô Minh Linh            Nghỉ phép năm                  13/04/2026 14/04/2026          4 Nghỉ phép năm
+OT                        9 NV_B         Huỳnh Ngọc Thảo          18:00-20:00                    15/04/2026 15/04/2026          2 Hoàn thành công việc gấp theo
+                                                                                                                                  kế hoạch phòng
+2 rows selected.

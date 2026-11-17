@@ -1,0 +1,6 @@
+-- qr04_hop_dong_sap_het_han   (user U_HR01, chay luc 15/11/2026 23:05)
+SO_HOP_DONG    MA_NHAN_VIEN HO_TEN                   TEN_PHONG_BAN      TEN_LOAI_HOP_DONG            NGAY_KET_T   CON_NGAY
+-------------- ------------ ------------------------ ------------------ ---------------------------- ---------- ----------
+HD-NV009-01    NV009        Phạm Thu Hoa             Phòng Nhân sự      Xác định thời hạn            30/11/2026         15
+HD-NV022-01    NV022        Hoàng Hoàng Chi          Phòng Kinh doanh   Xác định thời hạn            10/12/2026         25
+2 rows selected.

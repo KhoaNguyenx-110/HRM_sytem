@@ -1,0 +1,10 @@
+-- qr10_phep_con_lai   (user U_HR01, chay luc 15/11/2026 23:05)
+MA_NHAN_VIEN HO_TEN                   MA_PHONG_BAN SO_NGAY_DUOC_CAP SO_NGAY_DIEU_CHINH SO_NGAY_DA_DUNG SO_NGAY_CHO_DUYET SO_NGAY_CON_LAI CANH_BAO
+------------ ------------------------ ------------ ---------------- ------------------ --------------- ----------------- --------------- ------------
+NV001        Vũ Thanh Hương           BGD                        12                  2               0                 0              14
+NV019        Ngô Thu Vy               KINH_DOANH                 12                  0               1                 0              11
+NV_C         Huỳnh Văn Hùng           KINH_DOANH                 12                  0              ,5                 0            11,5
+NV_A         Ngô Minh Linh            KY_THUAT                   12                  0               0                 2              12
+NV_B         Huỳnh Ngọc Thảo          KY_THUAT                   12                  0               2                 0              10
+NV005        Huỳnh Ngọc Thảo          NHAN_SU                    12                  0               1                 0              11
+6 rows selected.

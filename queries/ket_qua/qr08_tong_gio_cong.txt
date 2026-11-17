@@ -1,0 +1,26 @@
+-- qr08_tong_gio_cong   (user U_HR01, chay luc 15/11/2026 23:05)
+MA_PHONG_BAN MA_NHAN_VIEN HO_TEN                   SO_NGAY_CO_CONG   GIO_CONG NGAY_NGHI_HUONG_LUONG NGAY_NGHI_KHONG_LUONG GIO_HUONG_LUONG     GIO_OT
+------------ ------------ ------------------------ --------------- ---------- --------------------- --------------------- --------------- ----------
+KY_THUAT     NV033        Phan Hải Dũng                         21        168                     0                     0             176          0
+KY_THUAT     NV037        Hoàng Thị Nam                         21        158                     0                     1             166          0
+KY_THUAT     NV038        Đỗ Quốc Tuấn                          21        168                     0                     0             176          0
+KY_THUAT     NV039        Phạm Thu Hoa                          21        168                     0                     0             176          0
+KY_THUAT     NV040        Bùi Văn Phúc                          21        168                     0                     0             176          0
+KY_THUAT     NV041        Lê Thanh Bình                         21        168                     0                     0             176          0
+KY_THUAT     NV042        Đặng Hoàng Khánh                      21        168                     0                     0             176          0
+KY_THUAT     NV043        Trần Hải Sơn                          21        168                     0                     0             176          0
+KY_THUAT     NV044        Võ Minh Giang                         21        168                     0                     0             176          0
+KY_THUAT     NV045        Nguyễn Ngọc Long                      21        168                     0                     0             176          0
+KY_THUAT     NV046        Vũ Đức Trang                          21        168                     0                     0             176          0
+KY_THUAT     NV047        Dương Thị Hạnh                        21        166                     0                     0             174          0
+KY_THUAT     NV048        Phan Quốc Nga                         21        168                     0                     0             176          0
+KY_THUAT     NV049        Ngô Thu Vy                            12         96                     0                     0              96          0
+KY_THUAT     NV050        Huỳnh Văn Hùng                        21        168                     0                     0             176          0
+KY_THUAT     NV_A         Ngô Minh Linh                         21        168                     0                     0             176          4
+KY_THUAT     NV_B         Huỳnh Ngọc Thảo                       21        168                     0                     0             176          3
+KY_THUAT     NV_KHOA      Hồ Đức Hải                            21        168                     0                     0             176          0
+18 rows selected.
+MA_PHONG_BAN   SO_NGUOI TONG_GIO_CONG TONG_GIO_HUONG_LUONG TONG_GIO_OT
+------------ ---------- ------------- -------------------- -----------
+KY_THUAT             18          2940                 3076           7
+1 row selected.

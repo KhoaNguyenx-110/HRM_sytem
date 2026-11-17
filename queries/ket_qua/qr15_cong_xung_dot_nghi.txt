@@ -1,0 +1,6 @@
+-- qr15_cong_xung_dot_nghi   (user owner, chay luc 15/11/2026 23:05)
+no rows selected
+MA_NHAN_VIEN NGAY         GIO_CONG   GIO_NGHI SO_GIO_CHUAN
+------------ ---------- ---------- ---------- ------------
+NV_C         05/02/2026          4          4            8
+1 row selected.

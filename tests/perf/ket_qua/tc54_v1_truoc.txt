@@ -1,0 +1,39 @@
+
+PL/SQL procedure successfully completed.
+
+  from hrm_owner.vw_cong_thang
+                 *
+ERROR at line 5:
+ORA-01039: insufficient privileges on underlying objects of the view
+Help: https://docs.oracle.com/error-help/db/ora-01039/
+
+
+  from hrm_owner.vw_phieu_luong_ca_nhan
+                 *
+ERROR at line 3:
+ORA-01039: insufficient privileges on underlying objects of the view
+Help: https://docs.oracle.com/error-help/db/ora-01039/
+
+
+  from hrm_owner.vw_bang_luong_tong_hop
+                 *
+ERROR at line 5:
+ORA-01039: insufficient privileges on underlying objects of the view
+Help: https://docs.oracle.com/error-help/db/ora-01039/
+
+
+    from hrm_owner.vw_bang_luong_tong_hop group by nam, thang)
+                   *
+ERROR at line 8:
+ORA-01039: insufficient privileges on underlying objects of the view
+Help: https://docs.oracle.com/error-help/db/ora-01039/
+
+
+PLAN TRUOC QR08 | Error: cannot fetch plan for statement_id 'QR08'
+PLAN TRUOC QR17 | Error: cannot fetch plan for statement_id 'QR17'
+PLAN TRUOC QR18 | Error: cannot fetch plan for statement_id 'QR18'
+PLAN TRUOC QR21 | Error: cannot fetch plan for statement_id 'QR21'
+DO TRUOC QR08 30 683.6 877.8 983.9 125921 100
+DO TRUOC QR17 30 5.6 9.0 30.1 721 10
+DO TRUOC QR18 30 0.7 1.6 9.2 101 6
+DO TRUOC QR21 30 2.0 2.9 14.8 98 12
